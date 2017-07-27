@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mpbo</title>
+  <!--[if lte IE 9]>
+     <script src="../ie/html5shiv/dist/html5shiv.js">
+     </script>
+
+  <![endif]-->
+
+  <style>
+  /* reset.css : 원하지 않는 기능은 쓰지 않게 하는 방법 */
+    html,body{width:100%; height: 100%;}
+    html,body,div,p,h1{margin:0; padding:0; border:0;}
+    ol,ul,li{list-style:none;}
+     
+      /* normalize.css --> 일반화 시키는 것. */ 
+   .clearfix:after{content:""; display:block; width:0; height:0; clear:both;}
+  
+    /* design.css */
+  /* 1.margin은 겹치는 내용은 중복되지 않는다. (일부 예외), 큰 값을 따른다.
+     2.margin-top을 사용할 때, 내용상 첫번째 요소에 사용하면, 그 부모의 태그 또한 같이 내려오는 현상이 발생한다. 
+         해결방법1: flaot:left; 속성을 사용하면 처리 가능 - 이후에 오는 요소에 따라 적응이 안되는 것들이 있다. 
+         해결방법2: 자신의 위치는 그대로 있고, 그 부모의 내용에서 상단(top)의 내용을 두껍게 만드는 방법.
+                   (공간을 형성, 이때, 자식의 위치는 변하지 않으나, 다른 사람이 보기에 커보이는 효과): padding-top 기능을 사용한다. 
+                   단, padding의 기능을 사용하면, 사용된 위치(top, right, left, bottom)의 값만큼 그 크기를 빼주어야 한다. */
+
+
+     /* 해결방법2 */
+/*   #wrap{width:960px; height:auto; min-height:150px; margin:0 auto;}
+    /* min-height:최소 이만큼의 높이가 되겠습니다. (반대로 최대는 max); */     
+/*     #headbox{width:100%;height:80px;background-color:#ddf; margin-bottom:100px;padding-top:20px;}
+       h1{width:100px; height:50px; background-color: #555;color:#fff; margin-left:20px;}
+     #adbox{width:100%;height:400px;background-color:#dff;}
+     #footbox{width:100%;height:200px;background-color:#777;margin-top:100px}  */    
+
+
+    /* 해결방법1 */
+   #wrap{width:960px; height:auto; min-height:150px; margin:0 auto;}
+    /* min-height:최소 이만큼의 높이가 되겠습니다. (반대로 최대는 max); */     
+     #headbox{width:100%;height:100px;background-color:#ddf; margin-bottom:100px;}
+       h1{width:100px; height:50px; background-color: #555;color:#fff;margin-left:20px;float:left; margin-top:20px;}
+     #adbox{width:100%;height:400px;background-color:#dff;}
+     #footbox{width:100%;height:200px;background-color:#777;margin-top:100px}
+
+
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+  <header id="headbox"><h1>던킨</h1></header> <!-- // #headbox -->
+  <section id="adbox">adbox</section> <!-- // #adbox -->
+  <footer id="footbox">footbox</footer> <!-- // #footbox -->
+  </div><!-- // #wrap-->
+</body>
+</html>

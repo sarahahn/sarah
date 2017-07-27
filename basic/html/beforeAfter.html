@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>가상선택자</title>
+<style>
+  .before_test{color:#0af; font-size:1.2em;}
+  /* 1em=16px */
+    .before_test:before{content:"before"; color:#f06;}
+    p>a:before{content:"점심시간 이후라 피곤하지만 그래도 고!";}
+  /* before라는 자리에 ""의 단어를 보여준다는 뜻. */
+  /* body에 작성을 하지 않아도, style에 작성하는 것만으로도 결과물을 볼 수 있다. */
+  /* 아무런 의미 없이 시각적인 것에만 보이고, 실제 접근성 면에서는 효력이 발생하지 않는다. */
+  /* 예를 들어, 회원가입 시, 반드시 작성해야 하는 부분에 "*"표시가 들어가지만, 눈에만 보일뿐 읽히지는 않는 것이다. */
+  /* Before는 inline요소이다. */
+
+    p>span:hover:after{content:"당신의 바람이"; color:#fa0}
+    /* hover : 마우스를 span위치에 올리면 효과가 나타남 */
+    /* 이제는 hover를 써주는 것이 아니라, ::두개를 사용하여 표기함. */
+
+</style>
+</head>
+
+<body>
+  <h1>가상 선택자</h1>
+  <h2 class="before_test">이전 선택자(Before)</h2>
+    <p>실제로 존재하지 않고, CSS효과로만 보이게 처리하는 것.</p>
+    <p><a href="#">링크</a></p>
+    <!-- p의 자식태크인 a의 before -->
+  <h2>이후 선택자(After)</h2>
+    <p>Before와 같은 기능이며, 이후(뒤에)구현된다. </p>
+    <p><span>이후</span>어딘가에 나타나게 하기.</p>
+
+  <h2>가상 선택자의 종류</h2>
+    <ul>
+      <li>before</li>
+      <li>after</li>
+      <li>hover : 해당하는 곳에 마우스를 올렸을 때, 기능을 하는 것</li>
+      <li>linked : link의 기능을 하는 것</li>
+      <li>visited : 방문하는 것. </li>
+      <!-- linked와 visited의 차이점. 
+          linked : 방문과 상관 없이 링크의 기능이 있는 것. <a> 또한 강제성이 크기 때문에 잘 사용하지는 않는다. 
+          visited : 방문을 한 후! (예를 들어, 링크된 부분을 클릭하고 다시 돌아오는 순간 링크된 부분이 보라색우로 변경되는 것.) -->
+      <li>active : 마우스를 누른 채로 있는 상태. </li>
+      <li>secected : form에서 사용</li>
+      <li>checked : form에서 사용</li>
+      <li>root : 최초 상태로 세팅 </li>
+    </ul>
+</body>
+</html>

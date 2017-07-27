@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+  <title>layout test_02</title>
+  <style>
+    /* reset.css */
+    html,body{margin:0;padding:0;}
+    header,footer,section,p,pre,br,h1,h2,h3,h4,h5,h6,dl,dd,dt,ul,li,ol,form,fieldset,div{margin:0;padding:0;}
+    ul,li,ol{list-style:none;}    
+
+    /* normalize */
+    .hidden{display:block;width:0;height:0;overflow:hidden;}
+    .cf:after,.clearfix:after{content:""; display: block; width:0; height:0; clear:both;}
+
+
+    /* design */
+    #wrap{width:960px; height:auto;background-color:#ccc;margin:0 auto;}
+      #headbox{width:960px;height:60px;background-color:#d8f;}
+        #logo{width:150px;height:40px;background-color:#fff;margin:10px;}
+      #articlebox{width:960px;height:auto;background-color:#da0;}
+        #menu{width:250px;height:1200px;float:left;background-color:#369;}
+          #menu>ul{width:100px;height:auto;padding:75px;}
+          #menu>ul>li{width:100px;height:250px;margin-bottom:250px;background-color:#fff;}
+          #menu .info{width:100px;height:500px;background-color:#fff;}
+        #content{width:710px;height:1200px;float:left;}
+          #content>ul{width:710px;height:1200px;padding:100px 20px;}
+          #content>ul>li{width:670px;height:250px;float:left;background-color:#cfa}
+          #content .blue{background-color:#00f;}
+      #footbox{width:960px;height:80px;padding:10px; box-sizing:border-box;background-color:#0af;}
+        #footbox>h2{width:150px;height:40px;float:left;background-color:#fff;}
+        #footbox>address{width:500px;height:40px;float:right;background-color:#fff;}
+
+
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <header id="headbox">
+    <h1 class="hidden">headbox</h1>
+      <div id="logo"><span class="hidden">logo</span></div>
+  </header><!-- // #header -->
+
+  <section id="articlebox"
+           class="clearfix">
+    <h2 class="hidden">articlebox</h2>
+
+      <aside id="menu">
+        <h3 class="hidden">menu</h3>
+        <ul>
+          <li>1</li>
+          <li class="info">2</li>
+        </ul>
+      </aside>
+
+      <main id="content">
+        <h3 class="hidden">content</h3>
+        <ul>
+          <li><span class="hidden">1</span></li>
+          <li class="blue"><span class="hidden">2</span></li>
+          <li><span class="hidden">3</span></li>
+          <li class="blue"><span class="hidden">4</li>
+        </ul>
+      </main>
+
+    </section><!-- // #section -->
+
+  <footer id="footbox">
+    <h2>lastlogo</h2>
+    <address>dizhi</address>
+  </footer><!-- // #footer -->
+</body>
+</html>

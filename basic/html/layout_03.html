@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>layout 만들어보기</title>
+<style>
+  *{margin:0; padding:0; border:0;}
+    body{width:600px; height:auto; background-color:#f99; margin:auto;
+        text-align:center;}
+  /* text 정렬 방법
+     1. 1줄일 경우 : height값과 동일한 값을 적어줌(line-height:"")
+     2. 2줄 이상일 경우 : padding값을 사용.(직접 계산해야 한다.)
+     3. 표/form형식일 경우 : {vertical-align:center;}사용.
+     4. 강제로 표 형식으로 전환(사실 권하지는 않는다.)
+         ex) display:table-cell 방식  */
+
+  .out_box{width:600px; height:auto; margin:0;}
+   #box{background-color:#3d0; margin:0;}
+     #headerbox{height:100px; background-color:#03a; margin:0;}
+     #sectionbox{height:auto; margin:0;}
+       #asidebox{width:200px; height:300px; float:left; background:#600;}
+       #articlebox{width:400px; height:150px; float:right; background:#333;}
+       #containerbox{width:400px; height:150px; float:right; background:#88f;}
+    div.clearfix{width:600px; clear:both;}
+
+       /* .clearfix
+          .clearfix::after{content:" "; display: block; width:0; height: 0; clear: both;}  */
+
+
+      /* 구형 브라우저에서는 header, section, aside, footer를 인지할 수 없다!
+      그래서 강제로 블럭처리 한다.  */
+     #footerbox{height:100px; background-color:#8f8; margin:0;}
+    
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <div id="box">
+    <header id="headerbox" class="out_box">header</header>
+    <section id="sectionbox" class="out_box">
+      <aside id="asidebox">aside</aside>
+      <article id="articlebox">article</article>
+      <container id="containerbox">container</container>
+    </section>
+    <div class="clearfix"></div>
+    <footer id="footerbox" class="out_box">footer</footer>
+  </div>
+
+</body>
+</html>

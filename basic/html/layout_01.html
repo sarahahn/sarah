@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!-- meta:compat
+    비표준(익스 하위버전)브라우저들을 가장 최신 버전으로 실행 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Document</title>
+  <style>
+   *{margin:0; padding:0; border:0;
+      --fontcolor:#fff;}
+   /* *상기 *의 뜻은 전체라는 의미: 실제로 많이 사용하는 것은 지양,
+      간단하게 처리할 수 있는 기능을 모든 곳곳에 사용해서 무거워지기 때문에. */
+   body{background-color:#063; margin:0;}
+   div#box{width:600px; height:auto;
+           margin: 0 auto;}
+        .out_box{width:inherit; height:100px;}
+        #headBox{background-color: #f0a;
+                 color:var(--fontcolor);}
+        #contentBox{height:300px; background-color: #fa0;}
+        #footBox{background-color: #0af;}
+
+  </style>
+
+</head>
+<body>
+  <div id="box">
+    <header id="headBox" class="out_box">
+      headbox
+    </header><!-- // #headBox -->
+    <section id="contentBox" class="out_box">
+      contentbox
+    </section><!-- // #sectionBox -->
+    <footer id="footBox" class="out_box">
+      footbox
+    </footer><!-- // #footBox -->
+  </div><!-- // #box -->
+</body>
+</html>

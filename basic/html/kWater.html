@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/css3pie/PIE_IE9.js"></script>
+  <![endif-->
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/normalize.css" />
+  <link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css" />
+
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+
+  <title>kWater</title>
+</head>
+<style>   
+  #wrap{width:960px;height:auto;margin:0 auto;}
+  #headbox{width:100%;height:93px;padding:17px 6px;box-sizing:border-box;}
+    #headbox>h1{width:98px;height:47px;float:left;background-image:url("../img/kwater/img/header/logo.jpg"); background-repeat:no-repeat;background-position:-3px -9px}
+    #headbox>div{width:795px;height:55px;float:right;}
+    #headbox>div>.menu{width:217px;height:18px;float:right;}
+      #headbox>div>.menu>li:nth-child(1){width:39px;float:left;background-image:url("../img/kwater/img/header/unb/unb_1.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.menu>li:nth-child(2){width:49px;float:left;background-image:url("../img/kwater/img/header/unb/unb_2.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.menu>li:nth-child(3){width:56px;float:left;background-image:url("../img/kwater/img/header/unb/unb_3.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.menu>li:nth-child(4){width:73px;float:left;background-image:url("../img/kwater/img/header/unb/unb_4.jpg"); background-repeat:no-repeat;}
+    #headbox>div>.gnb{width:618px;height:auto;float:right}
+    #headbox>div>.gnb>li{height:34px;}
+    #headbox>div>.gnb>li>a{width:100%; height:100%; display:block;}
+      #headbox>div>.gnb>li:nth-child(1){width:135px;float:left;background-image:url("../img/kwater/img/gnb/gnb_01.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(2){width:78px;float:left;background-image:url("../img/kwater/img/gnb/gnb_02.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(3){width:80px;float:left;background-image:url("../img/kwater/img/gnb/gnb_03.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(4){width:80px;float:left;background-image:url("../img/kwater/img/gnb/gnb_04.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(5){width:58px;float:left;background-image:url("../img/kwater/img/gnb/gnb_05.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(6){width:78px;float:left;background-image:url("../img/kwater/img/gnb/gnb_06.jpg"); background-repeat:no-repeat;}
+      #headbox>div>.gnb>li:nth-child(7){width:109px;float:left;background-image:url("../img/kwater/img/gnb/gnb_07.jpg"); background-repeat:no-repeat;}
+/* #headbox the end */
+
+
+  #contentbox{width:100%;height:1302px;}
+    #contentbox>.banner{width:100%;height:498px;background-image:url("../img/kwater/img/banner.jpg");background-repeat:no-repeat;}
+    #contentbox>.lnb{width:100%;height:101px;}
+    #contentbox>.lnb>li{width:95px;height:101px;margin-right:1px;}
+      #contentbox>.lnb>li:nth-child(1){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_10.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(2){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_1.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(3){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_2.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(4){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_3.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(5){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_4.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(6){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_5.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(7){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_6.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(8){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_7.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(9){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_8.jpg");background-repeat:no-repeat;}
+      #contentbox>.lnb>li:nth-child(10){float:left;background-image:url("../img/kwater/img/lnb/sub_nav_9.jpg");background-repeat:no-repeat;}
+    #contentbox>.article{width:100%;height:auto;}
+      #contentbox>.article>li{background-image:url("../img/kwater/img/article.jpg");background-repeat:no-repeat;}
+      #contentbox>.article>li:nth-child(1){width:236px;height:217px;float:left;background-position:0 0;}
+      #contentbox>.article>li:nth-child(2){width:239px;height:217px;float:left;background-position:-236px 0;}
+      #contentbox>.article>li:nth-child(3){width:248px;height:217px;float:left;background-position:-475px 0;}
+      #contentbox>.article>li:nth-child(4){width:236px;height:217px;float:left;background-position:-723px 0;}
+      #contentbox>.article>li:nth-child(5){width:236px;height:221px;float:left;background-position:0 -217px;}
+      #contentbox>.article>li:nth-child(6){width:239px;height:221px;float:left;background-position:-236px -217px;}
+      #contentbox>.article>li:nth-child(7){width:248px;height:221px;float:left;background-position:-475px -217px;}
+      #contentbox>.article>li:nth-child(8){width:236px;height:221px;float:left;background-position:-723px -217px;}
+      #contentbox>.article>li:nth-child(9){width:236px;height:108px;float:left;background-position:0 -438px;}
+      #contentbox>.article>li:nth-child(10){width:239px;height:108px;float:left;background-position:-236px -438px;}
+      #contentbox>.article>li:nth-child(11){width:248px;height:108px;float:left;background-position:-475px -438px;}
+      #contentbox>.article>li:nth-child(12){width:236px;height:108px;float:left;background-position:-723px -438px;}
+      #contentbox>.article>li:nth-child(13){width:236px;height:158px;float:left;background-position:0 -546px;}
+      #contentbox>.article>li:nth-child(14){width:239px;height:158px;float:left;background-position:-236px -546px;}
+      #contentbox>.article>li:nth-child(15){width:248px;height:158px;float:left;background-position:-475px -546px;}
+      #contentbox>.article>li:nth-child(16){width:236px;height:158px;float:left;background-position:-723px -546px;}
+/* #contentbox the end */
+
+  #footbox{width:100%;height:210px;padding:23px 8px;box-sizing:border-box;background-color:#f7f7f7;}
+    #footbox>.logo{width:91px;height:49px;float:left;margin-right:21px;
+                   background-image:url("../img/kwater/img/footer/h2.jpg");background-repeat:no-repeat;background-position:-5px -15px;}
+    #footbox>.info{width:509px;height:49px;float:left;margin-right:150px;}
+      #footbox>.info>ul{width:258px;height:19px;float:left;}
+        #footbox>.info>ul>li:nth-child(1){width:96px;float:left;background-image:url("../img/kwater/img/footer/f_map.jpg");background-repeat:no-repeat;}
+        #footbox>.info>ul>li:nth-child(2){width:91px;float:left;background-image:url("../img/kwater/img/footer/f_map-31.jpg");background-repeat:no-repeat;}
+        #footbox>.info>ul>li:nth-child(3){width:71px;float:left;background-image:url("../img/kwater/img/footer/f_map-32.jpg");background-repeat:no-repeat;}
+      #footbox>.info>address{width:100%;height:30px;float:left;background-image:url("../img/kwater/img/footer/address.jpg");background-repeat:no-repeat;}
+    #footbox>.mark{width:80px;height:80px;float:left;margin-right:15px;background-image:url("../img/kwater/img/footer/mark_01.jpg");background-repeat:no-repeat;
+                   background-position:-3px -10px;}
+    #footbox>.qrCode{width:78px;height:90px;float:left;background-image:url("../img/kwater/img/footer/mark_02.jpg");background-repeat:no-repeat;}
+
+/* #footbox the end */
+
+  
+</style>
+<body>
+    <div id="wrap">
+      <header id="headbox" class="clearfix">
+        <h1><a href="#"><span class="hidden">logo</span></a></h1>
+        <div>
+          <ul class="menu clearfix">
+            <li><a href="#"><span class="hidden">어린이</span></a></li>
+            <li><a href="#"><span class="hidden">직원광장</span></a></li>
+            <li><a href="#"><span class="hidden">english</span></a></li>
+            <li><a href="#"><span class="hidden">전체메뉴</span></a></li>
+          </ul>
+          <ul class="gnb">
+            <li><a href="#"><span class="hidden">정부3.0</span></a></li>
+            <li><a href="#"><span class="hidden">고객참여</span></a></li>
+            <li><a href="#"><span class="hidden">사업소개</span></a></li>
+            <li><a href="#"><span class="hidden">물정보관</span></a></li>
+            <li><a href="#"><span class="hidden">새소식</span></a></li>
+            <li><a href="#"><span class="hidden">열린채용</span></a></li>
+            <li><a href="#"><span class="hidden">K-water소개</span></a></li>
+          </ul>
+        </div>
+      </header>
+    <!-- // #headbox --> 
+       
+
+      <section id=contentbox>
+        <div class="banner"><span class="hidden">banner</span></div>
+        <ul class="lnb">
+          <li><span class="hidden">고객의 소리</span></li>
+          <li><span class="hidden">경영공시</span></li>
+          <li><span class="hidden">물 정보</span></li>
+          <li><span class="hidden">조직 및 직원 찾기</span></li>
+          <li><span class="hidden">신고센터</span></li>
+          <li><span class="hidden">견학</span></li>
+          <li><span class="hidden">요금</span></li>
+          <li><span class="hidden">수질</span></li>
+          <li><span class="hidden">사규</span></li>
+          <li><span class="hidden">제,계정예고</span></li>
+        </ul>
+        <ul class="article clearfix">
+          <li><a href="#"><span class="hidden">부채규모 및 부채 비율</span></a></li>
+          <li><a href="#"><span class="hidden">공지사항</span></a></li>
+          <li><a href="#"><span class="hidden">blog</span></a></li>
+          <li><a href="#"><span class="hidden">알림존</span></a></li>
+          <li><a href="#"><span class="hidden">동영상 뉴스</span></a></li>
+          <li><a href="#"><span class="hidden">보도자료</span></a></li>
+          <li><a href="#"><span class="hidden">나눔소식</span></a></li>
+          <li><a href="#"><span class="hidden">웹진</span></a></li>
+          <li><a href="#"><span class="hidden">토지분양안내</span></a></li>
+          <li><a href="#"><span class="hidden">입찰안내</span></a></li>
+          <li><a href="#"><span class="hidden">열린채용</span></a></li>
+          <li><a href="#"><span class="hidden">소셜센터</span></a></li>
+          <li><a href="#"><span class="hidden">고객지원</span></a></li>
+          <li><a href="#"><span class="hidden">정보제공</span></a></li>
+          <li><a href="#"><span class="hidden">Family site</span></a></li>
+          <li><a href="#"><span class="hidden">Family site_2</span></a></li>
+        </ul>
+      </section>
+    <!-- // #section -->
+
+      <footer id="footbox" class="clearfix">
+        <h2 class="logo"><span class="hidden">logo</span></h2>
+        <div class="info clearfix">
+          <ul class="clearfix">
+            <li><span class="hidden">개인정보 처리 방침</span></li>
+            <li><span class="hidden">업무추진비공개</span></li>
+            <li><span class="hidden">찾아오시는길</span></li>
+          </ul>
+          <address><span class="hidden">대전 광역시</span></address>
+        </div>
+        <div class="mark"><span class="hidden">mark</span></div>
+        <div class="qrCode"><span class="hidden">qrCode</span></div>
+      </footer>
+    <!-- // #footbox -->
+
+    </div>
+  </body>
+</html>
+

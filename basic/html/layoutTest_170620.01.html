@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+   <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+  <title>layout test</title>
+  <style>
+
+  /* reset.css */
+  html,body{margin: 0;padding: 0;}
+  header,section,footer,h1,h2,h3,h4,h5,h6,ul,ol,li,fieldset,hr,dl,dd,dt,form,pre,div,p{margin:0;padding:0;}
+  ul,li,ol{list-style:none}
+
+  /* normalize */
+    .cf:after,.clearfix:after{content:""; display: block; width:0; height:0; clear:both;}
+    .hidden{display:block; width:0; height:0; overflow:hidden;}
+    #wrap .first_li{margin-left:0;}
+
+
+
+  /* design */
+    #wrap{width:700px;height:inherit;margin:0 auto;}
+      #headbox{width:auto;height:80px;margin:0;padding:15px;box-sizing:border-box;background-color:#09f;}
+      h1{width:100px;height:50px;float:left;text-align:center;background-color:#fff;}
+      #navigation{width:430px;height:auto;margin:0;float:right;}
+        #navigation>ul{width:430px;height:30px;}
+        #navigation>ul>li{width:100px; height:30px;float:left;margin-left:10px;margin-top:25px;background-color: #fa0;}
+      #sectionbox{width:auto;height:auto;margin:0;}
+        .banner{width:auto;height:250px;background-color:#f75;}
+        .aside{width:auto;height:35px;background-color:#afc}
+        .article1{width:350px;height:300px;float:left;padding:20px 25px;box-sizing:border-box;background-color:#dff;}
+        .article1>ul{width:300px; height:260px;}
+        .article1>ul>li{width:140px;height:120px;float:left;border:5px solid #dff;background-color:#dcf;}
+        .article2{width:350px;height:300px;float:right;padding:15px 41px;box-sizing:border-box;background-color:#ffd;}
+        .article2>ul{width:258px;height:80px;}
+        .article2>ul>li{width:258px;height:80px;border:5px solid #ffd;background-color:#dcf;}
+      #footbox{width:auto;height:80px;margin:0;background-color:#fa6;}
+  </style>
+</head>
+<body>
+<div id="wrap">
+    <header id="headbox">
+      <h1>Logo</h1>
+      <nav id="navigation">
+        <h2 class="hidden">navi</h2>
+        <ul>
+          <li class="first_li">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </nav>
+    </header><!-- // #headbox -->
+    <section id="sectionbox"
+             class="clearfix">
+             <h2 class="hidden">abc</h2>
+      <article class="banner">
+        <h3>banner</h3>
+      </article>
+      <article class="aside">
+        <h3>aside</h3>
+        </article>
+      <article class="article1">
+        <h3 class="hidden">article1</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </article>
+      <article class="article2">
+      <h3 class=hidden>article2</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </article>
+    </section><!-- // #sectionbox -->
+    <footer id="footbox">
+    <h2>footer</h2>
+    </footer><!-- // #footerbox -->
+  </div><!-- // #wrap -->
+</body>
+</html>

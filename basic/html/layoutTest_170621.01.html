@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+  <title>Document</title>
+  <style>
+    /* reset.css */
+     html,body{margin:0; border:0;padding:0;}
+     h1,h2,h3,h4,h5,h6,p,pre,br,fieldset,li,ul,ol,dd,dt,dl,header,footer,section,form,div{margin:0; border:0; padding:0;}
+     ul,ol,li{list-style:none;}
+
+    /* normalize */
+    .cf:after,.clearfix:after{content:" "; display:block;width:0;height:0;clear:both;}
+    .hidden{display:block;width:0;height:0;overflow:hidden;}
+    .last_li{margin-bottom:0;}
+    #wrap .last_right{margin-right:0;}
+
+    /* Design */
+     #wrap{width:978px;height:auto;margin:0 auto;background-color:#ddd;}
+      #headbox{width:978px;height:150px;margin-bottom:20px;background-color:#fa6;}
+        h1{width:125px;height:125px;float:left;margin:12px;background-color:#6f9;}
+        #gnb>ul{width:650px;height:60px;float:left;margin-top:45px;margin-left:20px;padding:15px 33px;box-sizing:border-box;background-color:#f60;}
+          #gnb>ul>li{width:80px;height:30px;float:left;margin-left:33px;margin-right:33px;background-color:#adf;}
+        .sublogin>ul{width:120px;height:65px;float:right;}
+        .sublogin>ul>li{width:40px;height:40px;float:left;margin-top:15px;margin-right:15px;background-color:#09f;}
+        /* header design the end */
+
+      #sectionbox{width:978px;height:auto;}
+        #contentbox{width:100%;height:auto;margin-bottom:20px;background-color:#f6a;}
+          #l-button{width:40px;height:50px;float:left;margin-top:75px;background-color:#a6a;}
+          #contentbox>ul{width:894px;height:auto;float:left; padding: 25px 0; box-sizing: border-box;}
+          #contentbox>ul:after{content:" "; display: block;clear: both;}
+            #contentbox>ul>li{width:150px;height:150px;float:left;margin-left:25px;background-color:#6a5;}
+          #r-button{width:40px;height:50px;float:right;margin-top:75px;background-color:#a6a;}
+        #informbox{width:100%;height:auto;margin-bottom:20px;background-color:#6aa;}
+          #asidebox{width:175px;height:300px;float:left;background-color:#9a0;}
+            #asidebox>div{width:100px;height:100px;margin-top:37px;margin-left:37px;background-color:#99f;}
+          #articlebox{width:738px;height:300px;float:left;background-color:#f65;}
+            #articlebox>ul{width:738px;height:300px;}
+            #articlebox>ul>li{width:140px;height:140px;float:left;margin:5px 53px;background-color:#ffe;}
+          #sub{width:65px;height:300px;float:left;}
+            #sub>ul{width:65px;height:300px;padding-top:10px;box-sizing:border-box;background-color:#f65;}
+            #sub>ul>li{width:65px;height:50px;margin-bottom:10px;background-color:#fde;}
+        #bannerbox{width:978px;height:auto;margin-bottom:20px;background-color:#5fd;}
+          #subaside{width:215px;height:140px;float:left;background-color:#f9d;}
+            #subaside>ul{width:190px;height:50px;}
+            #subaside>ul>li{width:190px;height:50px;margin:13px;background-color:#777;}
+            #subaside>ul>li .click{width:40px;height:40px;float:right;margin:5px;background-color:#333;}
+          #toolaside{width:763px;height:auto;float:left;}
+            #toolaside>ul{width:763px;height:140px;padding:15px 12px;box-sizing:border-box;}
+            #toolaside>ul>.one{width:165px;height:50px;float:left;margin-right:10px;margin-bottom:10px;background-color:#a9f;}
+              #toolaside>ul>li .click{width:40px;height:40px;float:right;margin:5px;background-color:#333;}
+            #toolaside>ul>.two{width:300px;height:50px;float:left;margin-right:10px;margin-bottom:10px;background-color:#a9f;}
+              #toolaside>ul>li .click{width:40px;height:40px;float:right;margin:5px;background-color:#333;}
+            #toolaside>ul>.three{width:250px;height:50px;float:left;background-color:#a9f;}
+              #toolaside>ul>li .click{width:40px;height:40px;float:right;margin:5px;background-color:#333;}
+            #toolaside>ul>.four{width:600px;height:50px;float:left;margin-right:10px;background-color:#a9f;}
+            #toolaside>ul>.five{width:125px;height:50px;float:left;background-color:#a9f;}
+        #adbox{width:978px;height:auto;margin-bottom:20px;background-color:#6aa;}
+          .button{width:978px;height:auto;}
+            .button>ul{width:978px; height:140px;padding:10px;box-sizing:border-box;}
+            .button>ul>.menu{width:100px; height:45px;float:left;margin-right:10px;background-color:#3d9;}
+            .button>ul>.greennews{width:250px; float:left;height:30px;background-color:#3d9;}
+            .button>ul>.more{width:60px; height:30px; float:right;background-color:#3d9;}
+            .button>ul>.regist{width:60px; height:30px; float:right;margin-right:10px;background-color:#3d9;}
+          .list{width:978px;height:auto;}
+            .list>ul{width:978px;height:400px;padding-left:150px;padding-right:150px;box-sizing:border-box;}
+            .list>ul>li{width:150px;height:150px;float:left;margin-bottom:100px;margin-right:26px;background-color:#ae8;}
+          .page{width:978px;height:150px;}
+            .page>ul{width:270px;height:40px;margin-left:350px;background-color:#333;}
+            .page>ul>li{width:40px;height:40px;float:left;margin-right:6px;background-color:#ddd;}
+ddd      /* section design the end */
+
+      #footbox{width:978px;height:auto;padding:25px;box-sizing:border-box;background-color:#a6f;}
+        #footbox>h3{width:100px;height:100px;float:left;margin-left:100px;background-color:#aff;}
+        address{width:600px;height:100px;float:right;margin-right:100px;background-color:#f66;}
+
+  </style>
+</head>
+
+<body>
+<div id="wrap">
+<header id="headbox">
+  <h1>Green</h1>
+  <nav id="gnb">
+      <h2 class="hidden">gnb</h2>
+      <ul>
+        <li>학원소개</li>
+        <li>강사소개</li>
+        <li>수업시간</li>
+        <li>회원관리</li>
+      </ul>
+  </nav>
+  <div class="sublogin">
+    <ul>
+      <li>회원가입</li>
+      <li>로그인</li>
+    </ul>
+  </div>
+</header><!-- // #header -->
+
+<section id="sectionbox">
+  <h2 class="hidden">sectionbox</h2>
+    <section id="contentbox" class="clearfix">
+      <h3 class="hidden">contentbox</h3>
+      <div id="l-button">&lt;</div>
+      <ul>
+        <li>혜빈</li>
+        <li>수진</li>
+        <li>하영</li>
+        <li>단비</li>
+        <li>영란</li> 
+      </ul>
+      <div id="r-button">&gt;</div>
+    </section>
+    <section id="informbox" class="clearfix">
+    <h3 class="hidden">informbox</h3>
+    <aside id="asidebox">
+      <h4 class="hidden">good</h4>
+      <div>good</div>
+    </aside>
+    <article id="articlebox">
+      <h4 class="hidden">list</h4>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </article>
+    <article id="sub">
+      <h4 class="hidden">sub list</h4>
+      <ul> 
+        <li>특강</li>
+        <li>오전수업</li>
+        <li class="last_li">오후수업</li>
+      </ul>
+    </article>
+    </section>
+
+    <article id="bannerbox" class="clearfix">
+    <h3 class="hidden">bannerbox</h3>
+      <aside id="subaside">
+        <ul>
+          <li>특강수업</li>
+          <li>시간표
+            <div class="click">눌러</div></li>
+        </ul>
+      </aside>
+      <aside id="toolaside" class="clearfix">
+        <ul>
+          <li class="one">one
+            <div class="click">눌러<div></li>
+          <li class="two">two
+            <div class="click">눌러<div></li>
+          <li class="three">three
+            <div class="click">눌러<div></li>
+          <li class="four">four</li>
+          <li class="five">five</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="adbox">
+    <h3 class="hidden">adbox</h3>
+      <div class="button">
+        <ul>
+          <li class="menu">메뉴</li>
+          <li class="greennews">그린소식</li>
+          <li class="more">더보기</li>
+          <li class="regist">등록</li>
+        </ul>
+      </div>
+      <div class="list clearfix">
+        <ul>
+          <li>현준</li>
+          <li>단비</li>
+          <li>승희</li>
+          <li class="last_right">새나</li>
+          <li class="last_li">수진</li>
+          <li class="last_li">하영</li>
+          <li class="last_li">혜빈</li>
+          <li class="last_li last_right">보람</li>
+        </ul>
+      </div>
+      <div class="page">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li class="last_right">6</li>
+        </ul>
+      </div>
+    </article>
+  </section><!-- // #section -->
+
+<footer id="footbox" class="clearfix">
+  <h2 class="hidden">footbox</h2>
+  <h3>logo</h3>
+  <address>경기도 수원시 팔달구 수원역 매산로 그린컴퓨터학원</address>
+</footer><!-- // #footer -->
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/normalize.css">
+  <link rel="stylesheet" href="../css/src/layout_05.css">
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+  <title>Layout_05</title>
+  <style>
+ 
+    /* normalize: 일반적으로 자주 사용하는 기법을 등록해서 필요에 따라 바로 사용할 수 있도록 미리 처리.(단축키) */
+
+
+    /* ============================================================================================ */
+
+
+  
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headbox">
+     <h1>logo</h1>
+     <nav id="unb">
+       <h2 class="hidden">utility navigation</h2>
+       <ul>
+         <li class="first_li">unb_01</li>
+         <li>unb_02</li>
+         <li>unb_03</li>
+         <li>unb_04</li>
+       </ul>
+       </nav>
+      <nav id="gnb">
+        <h2 class="hidden">global navigation</h2>
+        <ul>
+          <li class="first_li">navi_01</li>
+          <li>navi_02</li>
+          <li>navi_03</li>
+          <li>navi_04</li>
+          <li>navi_05</li>
+          <li>navi_06</li>
+          <li>navi_07</li>
+          <li>navi_08</li>
+        </ul>
+      </nav><!-- //#gnb -->
+    </header><!-- //#headbox -->
+    <section id="contentbox" class="clearfix">
+    <h2 class="hidden">contentbox</h2>
+      <div class="log_in">
+      <h3 class="hidden">login</h3>
+        <ul>
+          <li class="max">max</li>
+          <li class="min">min</li>
+          <li class="add">add</li>
+          <li class="check">check</li>
+        </ul>
+      </div>
+      <div class="banner_box">
+      <h3 class="hidden">banner</h3>
+      </div>
+        <ul class="clearfix">
+          <li class="ad">ad</li>
+          <li class="ad2">ad2</li>
+      <div class="news_box">
+      <h3 class="hidden">news</h3>
+        <ul class="clearfix">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul> 
+      </div>
+    </section><!-- //#contentbox -->
+    <footer id="footbox">
+      <h2 class="hidden">info</h2>
+      <ul class="clearfix">
+        <li class="sub_logo">sub_logo</li>
+        <li class="address">address</li>
+        <li class="family">family</li>
+        <!-- 또는 
+           <h2>info</h2>
+           <address></address> 
+           <div class="family"></div>로 작성하여도 가능 -->
+      </ul>
+    </footer><!-- //#footbox -->
+
+<!-- box sizing: 기본이 content-box
+                border-box를 사용하면 padding은 개체 내부로 생성이 된다. 
+                (개체릐 크기가 작아짐.)
+                border또한 border-box를 사용하면 내부로 생성이 됨. 
+
+     float 사용시 margin: float를 사용하지 않으면 겹치는 여백은 큰 쪽을 따르나, 
+                          float를 사용한다면 둘은 중첩이 되지 않고 둘다 생성이 된다. -->
+
+
+  </div><!-- //#warp -->
+</body>
+</html>

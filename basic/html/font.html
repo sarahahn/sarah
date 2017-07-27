@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <!--  단축키 : "compat"쓰고 tab -->
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <!-- 단축키 : "cc:ie"쓰고 tab
+        lte의 뜻 : 9보다 작거나 같을때! -->
+  <!-- script를 작성하는 이유: html5의 code가 ie6,7,등등의 낮은 버전에서는 안읽히기 때문에 강제로 읽히게 하려고 작성하는 것임. -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+
+
+  <title>font</title>
+  <style>
+    html{font-family:"Shadows Into Light", cursive,"myriad pro","돋움",dotum;} 
+    h1{font-family:"Amatic SC", cursive;} 
+    p{font-family:"Nanum Gothic Coding", monospace;}
+    /* 전체는 전부 myriad로 쓰되, 안되는 글씨체만 sanserif로 써주세요! 의 이미임. (이때, 한국어는 sans-serif의 영향을 받지만, myriad의 영향을 받지 않음.) 
+        이때, 다른 글자체를 쓰고 싶다면 ,  영어 먼저 쓴 후, 다시 한글 글씨체를 써준다. (이때, 순서가 중요한 이유: 먼저 쓴 것이 주로 먹히기 때문.) */
+    /* 만약 서체에 띄어쓰기가 있다면, " "를 사용하여 하나인 것을 표기해 준다.  */
+  </style>
+
+</head>
+<body>
+<!-- webfont란, 웹사에 존재하는 font (ex. www.google.com/fonts) -->
+<div id="wrap">
+  <h1>font에 대해 이해해 봅시다!</h1>
+  <p>font란 : 서체(글꼴)을 말한다.</p>
+  <h2>서체의 형태 : font-family </h2>
+  <p><strong>font-family</strong>는 글꼴을 의미하며, <br />
+    여러개의 서체를 사용할 수 있다. </p>
+  <p>처음 서체를 사용했는데 적용이 안될경우, 다음 서체를 사용한다. </p>
+  <p><span>ex:</span>font-family:"myriad pro",arial,dotum, sans-serif</p>
+  <p>서체명이 띄어쓰기를 사용한다면 따옴표를 감싸서 처리. </p>
+  <p>모든 서체가 없다면 해당하는 서체의 스타일의 최종형태(종류)로 구분하여 쓴다. </p>
+  <p>sans-serif, serif, monospace...</p>
+  <hr />
+  <h2>web font</h2>
+  <p><strong>웹폰트란?</strong>일반적으로 사용하는 폰트는 모든 컴퓨터에 존재하는 것이 아니다. <br />
+  그렇기에, 원하는 폰트를 항시 적용시키는 것은 어렵다. 
+  그래서 웹상의 서버를 통한 서체를 불러와서 사용하는 방법이 있다. 이를 <strong>web font</strong>라고 한다. </p>
+  <p>대표적인 사이트가 <a href="https://google.com/fonts">구글웹폰트</a></p>
+  <p>원하는 서체를 고르고 선정하여 html문서의 상단에 불러온다. </p>
+  <p>&lt;link rel="stylesheet" href="https://www.google.com/fonts...폰트명..."&gt;</p>
+  <hr />
+  <h2>웹폰트2</h2>
+  <p>한글폰트를 적용하려면, <a href="https://fonts.google.com/earlyaccess">기타서체(about안에)</a>
+  페이지에서 <strong>korea를 검색하여 사용하여야 한다. </strong></p>
+  <hr />
+  <h2>font기타 내용</h2>
+  <dl>
+    <<dt>font-weight</dt>
+    <dd>서체의 굵기를 조정: <br />
+         100~900(100단계씩 사용)<br />
+         regular(400) | normal 기준으로 가늘어지면, light, lighter,...<br />
+         굵어지면 semi bold, bold, bloder...<br />
+         이는 서체를 개발한 회사 또는 디자이너에 따라 존재의 유무를 판단.
+         </dd>
+      <dt>font-style</dt>
+        <dd>서체의 기울기를 조정:<br />
+            normal, italic 두가지를 기억</dd>
+      <dt>line-height</dt>
+        <dd>행간<br />
+          행간의 기본 높이는 120%(1.2em) (한글office는 160%)<br />
+          </dd>
+      <dt>letter-spacing</dt>
+        <dd>자간: 글자와 글자 사이의 간격</dd>
+      <dt>word-spacing</dt>
+        <dd>어간 : 단어와 단어 사이의 간격</dd>
+      <dt>font-stretch</dt>
+        <dd>장평: 글자 하나의 가로넓이를 조정</dd>
+      <dt>text-transform</dt>
+        <dd>영문을 기준으로, 대문자로(uppercase), 소문자(lowercase), 단어 첫글자(capitalize)를 대문자로 변환. </dd>
+      <dt>text-decoration</dt>
+        <dd>글자의 장식(밑줄underline, 상단의 라인overline, 취소선line-through) 등등..을 뜻함. </dd>
+      <dt>text-indent</dt>
+        <dd>글자 들여쓰기</dd>
+      <dt>color</dt>
+        <dd>글씨 색</dd>
+      <dt>text-align</dt>
+        <dd>글씨 좌우 정렬, 왼쪽left, 오른쪽right, 가운데center, (양쪽justify_한줄일 경우는 안되고, 두줄 이상일 경우에 작용됨.)</dd>
+      <dt>vertical-align</dt>
+        <dd>text세로 정렬, 하지만 block코드에서는 작동되지 않음. </dd>
+  </dl>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!-- meta:compat
+    비표준(익스 하위버전)브라우저들을 가장 최신 버전으로 실행 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Document</title>
+  <style>
+   *{margin:0; padding:0; border:0;
+      --fontcolor:#fff;}
+   /* *상기 *의 뜻은 전체라는 의미: 실제로 많이 사용하는 것은 지양,
+      간단하게 처리할 수 있는 기능을 모든 곳곳에 사용해서 무거워지기 때문에. */
+   body{background-color:#063; margin:0;}
+   #box{width:600px; height:auto;
+           margin: 0 auto;}
+        .out_box{width:inherit; height:100px;}
+        #headBox{background-color: #f0a;
+                 color:var(--fontcolor);}
+        #contentBox{height:auto;}
+          #sideBox{width:33.333333%; height:300px; float:left; background-color:#;}  
+          /* 정확하게 맞춰주기 위해 소숫점 6째 자리까지 계산하여 맞춰주어야 한다.(%, em, rem..)(-px의 수치 제외)
+             기왕이면 가운데 값을 바꾸어 0으로 맞추어 주는 것이 좋다. 
+             최근, IE를 제외한 나머지 브라우저는 이렇게 안해도 되지만..(하기 주석 내용 참고.) 표준이 아니다!!!*/
+          #dataBox{width:33.333334%; height:300px; float:left; background-color:#333;}
+          #dataBox2{width:33.333333%; height:300px; float:left; background-color:#888;}
+
+       
+     /*     #sideBox{width:calc(100% / 3); height:300px; float:left; background-color:#ccc;}  
+               이때, 연산기호 앞뒤에는 반드시 띄어쓰기를 해주어야 한다. (+,-,*,/,%)  --> css3의 최신기능. */
+      /* 기술은 구현되지만, 표준으로 등록되지 않은 경우에는 사용할 수 없음. 
+      이러한 경우에 미래에 사용할 수 있는 기능을 당제로 끌어쓰는 방법이 바로 "벤더프리픽스"이다. 
+        벤더 프리픽스란, 앞 뒤에 밴더(-)를 달고, 해당하는 브라우저의 방식 작성하여 구현, 
+                         차후 표준으로 등재(권고)시 밴더프리픽스의 기능은 삭제. */
+     
+     \
+         /* 벤더 프리픽스 기능의 예시 : #contentBox{width:-webkit-calc(100 / 3);} / webkit:chrome, safari, swing
+                                        #contentBox{width:-moz-calc(100 / 3);} / moz:mozilla(fire fox)
+                                        #contentBox{width:-ms-calc(100 / 3);} / ms:microsoft(IE, edge)
+                                        #contentBox{width:-o-calc(100 / 3);} / o:opera
+                                        #contentBox{width:calc(100 / 3);} / 표준(미래에서 표준으로 등재시 사용.) */
+
+
+
+
+          /*현재 문제점 : 블록 요소를 옆으로 나열하기 위해 float기능을 사용한다. 
+                          왼쪽을 기준으로 나열하기 위해 float:left;
+                          오른쪽을 기준으로 나열하기 위해 float:right; 라고 작성.
+             : 문제점 1: 부무요소에 높이값을 설정하면 넘어가는 사이즈를 설정시 매번 변경해야 한다. 
+             : 문제점 2: 부무요소에 높이값을 auto로 설정시 부모의 넢이는 0으로 처리 (float의의미)
+
+             : 해결하기 위한 용어1 : clear속성을 사용
+             : 해결하기 위한 용어2 : 정의된 이름은 아니지만, 보편적으로 .clearfix의 기법
+             : 해결하기 위한 용어(방법)3. : css의 추가기능(선택자의 기능) -  ::before, ::after  */
+          /*하기참조*/
+          /*div.clearfix처리*/
+          div.clearfix{width: 100%; clear:both;}
+            /* clearfix는 항상 float과 함께 쓰는데, 형제관계의 마지막 부분에 사용한다. 
+               다시 말해 clear는 float(나열)기능을 상쇄하는 것이다.  */
+            /*br.clearfix처리*/
+            /* .clearfix{clear:both;} */
+
+            .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+            /* after는 inline속성이며, 상기 contect의 " " 부분에 띄어쓰기를 하는 이유는 Opera 브라우저 때문이다. */
+
+        #footBox{background-color: #0af;}
+
+  </style>
+
+</head>
+<body>
+  <div id="box">
+    <header id="headBox" class="out_box">
+      headbox
+    </header><!-- // #headBox -->
+
+    <section id="contentBox" class="out_box clearfix">
+      <aside id="sideBox">sideBox</aside><!-- // #asideBox -->
+      <article id="dataBox">dataBox</article><!-- // #dataBox -->
+      <article id="dataBox2">dataBox</article><!-- // #dataBox -->
+
+<!-- clearfix의 이해
+    * div코드로 눈에 보이게 만들어서 사용
+    * br코드로 변형시켜 사용
+    * 가상선택자(:after)를 사용 -->
+
+    <!-- 이해1 : div.clearfix를 사용-->
+    <!--<div class="clearfix">clearfix위치</div>-->
+    
+    <!-- 이해2 :br.clearfix를 사용 -->
+    <!-- <br class="clearfix" /> -->
+    
+    <!-- 이해3 : 가상 선택자 ::after를 사용 (부모에 class-:clearfix" 삽입) -->
+    
+
+    </section><!-- // #sectionBox -->
+
+    <footer id="footBox" class="out_box">
+      footbox
+    </footer><!-- // #footBox -->
+
+  </div><!-- // #box -->
+
+</body>
+</html>
