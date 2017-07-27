@@ -1,0 +1,98 @@
+  #wrap{width:1040px; height:auto; margin:0 auto; padding:0 20px;box-sizing:border-box;}
+
+    #headBox{width:100%; height:auto;}
+      #unb{width:100%; height:35px; padding:5px 20px; box-sizing:border-box;
+          >.insam{width:110px;height:25px;font-size:0.8em; float:left; margin-top:5px;}
+          >.subunb{width:auto; height:25px; float:right;
+            >ul{width:auto; height:auto; padding:5px; box-sizing:border-box; 
+              &:after{content:" "; display: block; clear: both;}
+              >li{width:auto; height:15px; margin-right:15px;float:left;
+                  font-size:0.8em;
+                &:last-child{margin-right:0;}
+              }//#headBox>#unb>.subunb>ul>li
+            }//#headBox>#unb>.subunb>ul
+          } //#headBox>#unb>.subunb
+        } //#headBox>#unb
+      #mainGuideBox{width:100%; height:100px;
+                    padding:15px 20px;box-sizing:border-box;
+        >h1{width:180px;height:35px;background-image:url("../../img/img/h1_logo.png");
+            background-repeat:no-repeat;float:left;margin-right:70px;margin-top:20px;}
+        >form{width:425px; height:auto; float:left;
+          >fieldset{width:100%; height:auto; border:2px solid #f30; margin-top:10px;
+            >input{width:345px; height:40px; padding:5px; border:0; text-indent:1em;}
+            >button{width:75px; height:50px; color:#f30; font-weight: bold;}
+            } //#mainGuideBox>form>fieldset
+          } //#mainGuideBox>form
+        >.smallad{width:230px; height:70px; margin-right:15px; float:right;
+                  background-image:url("../../img/img/ad_btn_11.jpg");
+                  background-position:center; background-repeat:no-repeat;}
+        } //#mainGuideBox
+      #gnb{width:100%; height:auto;
+          >ul{width:100%; height:auto; padding-right:20px; 
+              padding-left:20px; box-sizing:border-box;
+              >li{width:auto; height:60px; float:left;
+                  margin-right:70px; text-align:center; padding-top:20px; 
+                  box-sizing:border-box;
+              &:last-child{margin-right:0;}
+              &:first-child{margin-left:25px;}
+              }//#headBox>#gnb>ul>li
+            }//#headBox>#gnb>ul
+        } //#headBox>#gnb
+
+  #bannerBox{width:100%; height:520px;}
+    #adverBox{width:100%; height:180px;
+      >div{width: 33.333%; height: 100%; float: left; background-repeat: no-repeat;
+        background-position:cover;}
+      >div:nth-of-type(1){background-image:url("../../img/img/ad_btn_14.jpg");}
+      >div:nth-of-type(2){background-image:url("../../img/img/ad_btn_10.jpg");}
+      >div:nth-of-type(3){background-image:url("../../img/img/ad_btn_9.jpg");}
+    }// #adverBox
+    #recomendBox{width:100%; height:1090px;}
+    #popularBox{width:100%; height:495px;}
+    #brandBox{width:100%; height:710px; padding: 15px 20px; box-sizing:border-box;
+              background-color:#ffa; margin-bottom:50px;
+      >.brandtitle{width:1000px; height:35px; 
+        >h2{width:120px; height:35px; float:left;}
+        >p{width:120px; height:20px; float:left;}
+        >a{width:60px; height:20px; float:right;}
+        }// #brandBox>.brandtitle
+      >ul{width:auto;height:620px; padding: 20px 0; box-sizing:border-box;
+        >li{width:305px; height:180px; float:left;margin-right:20px;background-color:#aaf;
+            margin-bottom:20px;
+            &:nth-of-type(3n){margin-right:0;}
+            &:last-child{width:955px; margin-right:0; margin-bottom:0;}
+          }// #brandBox>ul>li
+        }// #brandBox>ul
+      }// #brandBox
+    #goodsBox{width:100%; height:400px;background-color:#faa;
+              padding:5px 20px; box-sizing:border-box;margin-bottom: 50px;
+      >h2{width:100%; height:30px; text-align:center;margin-bottom:30px;}
+      >ul{width:100%; height:auto;
+          >li{width:220px; height:310px;margin-right:26px;background-color: #fff; 
+                float:left;
+           &:last-child{margin-right:0;}
+            }//#goodsBox>ulli
+          } //#goodsBox>ul
+        } //#goodsBox
+    #foodBox{width:100%; height:460px; padding: 130px 240px; box-sizing:border-box;
+             background-image:url("../../img/img/ad_btn_117.jpg");
+             background-position:center;background-size:cover;
+            >div{width:100%; height:140px; text-align:center;
+              >h2{width:100%; height:15px;line-height:15px;margin-bottom:20px;font-size:1em;}
+              >h3{width:100%; height:45px;line-height:45px;margin-bottom:20px;font-size:2em;}
+              >p{width:100%; height:20px;line-height:20px;margin-bottom:20px;font-size:1.2em;}
+              }// #footBox>div
+            >button{width:120px; height:40px; margin:10px 215px; border:2px solid #fff;
+                    font-weight: bold;}
+             } //#footBox 
+    #noticeBox{width:100%; height:auto;}
+      #announce{width:100%; height:70px;background-color:#faa;}
+      #health{width:100%; height:55px;background-color:#fa6;}
+      #story{width:100%; height:115px;background-color:#f6a;}
+      #familySite{width:100%; height:50px;background-color:#f66;}
+
+    #footBox{width:100%; height:auto;}
+      #csCenter{width:100%;height:75px;background-color:#ff6;}
+      #kcpService{width:100%;height:65px;background-color:#ffa;}
+      #compayInfo{width:100%;height:110px;background-color:#ff3;}
+   
