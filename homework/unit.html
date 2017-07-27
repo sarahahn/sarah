@@ -1,0 +1,57 @@
+Hello, this is a snippet.
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+
+  <link rel="stylesheet" href="../basic/css/base/reset.css" />
+  <link rel="stylesheet" href="../basic/css/base/normalize.css" />
+  <link rel="stylesheet" href="../basic/fontAwesome/css/font-awesome.min.css" />
+
+  <title>단위의 기초 이해</title>
+</head>
+<style>
+  /* :root{font-size:16px} */
+  html,body{font-size:100%} 
+  #wrap{width: 1500px;height: 0 auto; font-size:1em}/* 16px */
+  .box_01{font-size: 2em} /* 32px */
+  .box_02{font-size: 0.5em} /* 16px: rem,em은 상대값이다. 대상은 부모이다. 따라서 현재 부모의 font값이 32이기 때문에, box_02의 값은 16px이다. ; */
+  .box_03{font-size: 1em} /* 16px */
+  
+</style>
+<body>
+  base font size 처음의 설정값
+  <div id="wrap">
+    첫번째 font size
+    <div class="box_01">
+      두번째 font size
+      <div class="box_02">
+        세번째 font size
+        <div class="box_03">
+      </div>
+    </div>
+
+
+
+<!-- 수업내용 -->
+
+    <h1>단위</h1>
+      <h2>단위란?</h2> 
+      <p><strong>웹에서 사용할 수 있는 수치의 표현</strong>
+          ex) px pt em rem vw vh % ..etc..
+        최초의 설정에서(:root) 16px==12pt==100%==1em==1rem</p>
+
+      <p>기본은 px을 많이 사용하다가,
+         반응형웹과 픽셀(레티나디스플레이)의 발달로 인해 좀 더 detail하게 복잡한 단위가 생성되게 되면서 
+         과거에는 em단위를 폰투의 크기 단위로 사용했으나, 
+         여러 사용상의 문제들이 발생하게 되면서 rem단위의 사용이 늘었음. 
+         (현재는 rem단위의 사용률이 조금 더 높다.)
+         하지만, IE 하위버전에서는 em과 rem모두 사용에 대한 제한이 있다. </p>
+
+<!-- // 수업내용 -->
+
+  </body>
+</html>

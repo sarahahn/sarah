@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>position</title>
+    <style>
+      .hidden{display:block;overflow:hidden;margin:0; padding:0;}
+    </style> 
+</head>
+<body>
+  <h1>Position</h1>
+    <h2>position이란?</h2>
+      <p>cs에서 화면에 보여지는 개체의 위치를 정할때 사용하는 기능 (속성)<br />
+         position은 기본적으로 자주 사용할 수 있는 기능이지만, 처음부터 position을 남용하는 것은 좋지 않다.</p>
+        <ul>
+          <li>잘못 사용할 경우: 하나를 수정하더라도 다른 것에 영향이 전혀 없어서 일일이 수정해줘야 하는 일</li>
+            <ul>
+              <li>페이지 내에서 모든 개체(div, p, h...)를 일일이 위치를 정해주면, 간단하게 수정할 일도 어렵게 된다. </li>
+            </ul>
+          <li>잘못 사용할 경우: 하나를 수정하였을 경우 같이 변경되어 전체가 흐트러 지는 경우</li>
+            <ul>
+              <li>relative(부모속성) 속성에 맞춰 움직이는 것들이 일괄 변형되어 중심을 잡기 어려워지는 현상</li>
+            </ul>
+        </ul>
+        <p>결론: position은 무조건 잘 써야 한다! (가장 마지막에 사용해야 하는 기능)</p>
+        <br />
+    <h2>주로 사용되는 곳</h2>
+      <ol>
+        <li>슬라이드 광고 베너 좌/우 버튼 (인디케이터)</li>
+        <li>화면의 정 가운데 배치된 팝업창</li>
+        <li>top버튼</li>
+        <li>브라우저 오른쪽에 고정되어 있는 창</li>
+        <li>11번가, G마켓의 하단/우측에 고정된 내용들</li>
+        <li>이미지는 이미지 대로, 순위표는 따로 움직여야 하는 경우</li>
+        <li>쇼핑몰에서 사용하는 이미지의 끝에 붙어있는 순위표(1,2위)</li>
+      </ol>
+    <h2>기초속성</h2>
+    <table>
+      <caption class="hidden">용어</caption>
+      <th>
+        <td>이름</td>
+        <td>뜻</td>
+      </th>
+      <tr>
+      <td>static</td>
+      <td>따로 position의 속성을 사용하지 않아도 적용되는 기본 상태, 즉 아무 기능이 동작하지 않는다.</td>
+      </tr>
+      <tr>
+      <td>fixed</td>
+      <td>브라우저 화면 내에서 스티커로 붙여놓은 것과 같은 효과, 화면상의 고정위치</td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+
+
+
+
+    <ol>
+      
+      
+      <li>relative: 특별하게 위치를 잡거나 하는 기능으로 사용하지 않음. [기준이 존재하는 것(ex: 쇼핑몰 이미지위에 best1,2 의 글씨가 이미지 안을 기준으로 써있는 것.)], absolute의 부모역할을 하는 기준<br />   
+                    absolute의 부모역할을 함. </li>
+      <li>absolute: 항상 부모가 필요함. 
+                     자신의 부모를 기준으로 위치를 움직여서 처리, 부모는 반드시[relative, absolute, fiexd]중, 하나의 속성을 가지고 있어야 한다. 
+                     하위 absolute를 또 가질 수도 있다.</li>
+      <li>Z-index: position을 사용시(static제외) Z축을 기준으로 이동하여 위치를 만들어 내는 것. 편의상, 앞/뒤의 배치, 단위는 존재하지 않음. 
+                   음의값(-)부터 양의 값(+)까지 가능, 일반적으로 수치는 100단위씩 사용.(전체 위지를 파악하기 좀 더 용이하게 하려는 목적)<br />
+                   단, 부모의 z-index값을 기준으로 음의 값으로 이동할 수 없다!</li>
+                <!-- <style>
+                       .relative{position:relative; z-index:100;}
+                       .absolute{position:absolute; z-index:-100;}   
+                            -> z-index수치를 -로 사용하는 것은 불가능. (부모의 값이 존재하기 때문에.)
+                     </style>
+                     <body>
+                       <div class="relative">
+                         <div class="absolute">
+                           자식
+                         </div>
+                       </div>
+                     </body> -->
+
+      <li>top/left/right/bottom: position사용시(static제외) 사용 가능한 기능으로, 해당 위치에서 원하는 방향으로 위치 이동시 필요한 기능. / 단위값 사용. 
+
+           margin과 다르게 본인이 중심이 아닌, 주변이 중심임.<br />
+           그래서 top-위에서부터 내가 얼마정도 떨어지겠다! / right-오른쪽에서 얼만큼 떨어지겠다!! etc...의 뜻.</li>
+    </ol>
+    </table>
+
+
+
+
+
+
+</body>
+</html>

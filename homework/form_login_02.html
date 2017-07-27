@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>form_login_02</title>
+</head>
+<style>
+  .hidden{display:block;width:0;height:0;overflow:hidden;}
+  
+  body{background-color:#3c3;}
+  #wrap{width:700px;height:500px;margin:0 auto;background-color:#5f6;}
+  form{width:100%; height:100%; padding:3em; box-sizing:border-box;}
+  fieldset>div{width:400px;height:auto;padding:10px;box-sizing:border-box; background-color: #ccc;}
+  fieldset>div>input{width: 100%; height: 100%;}
+
+
+
+</style>
+<body>
+  <div id="wrap">
+    <h1 class="hidden">log_in</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend class="hidden">log_in</legend>
+
+          <div class="username">
+            <label for="username" class="hidden">User name</label>
+            <input type="text" id="username" name="username" value="" placeholder="User name" />
+          </div>
+
+          <div class="password">
+            <label for="pwd" class="hidden">Pass word</label>
+            <input type="text" id="pwd" name="pwd" value="" placeholder="Password" />
+          </div>
+
+          <div class="login_btn">
+            <input type="submit" value="LOGIN" />           
+          </div>
+
+          <div>
+            <p>Not registered? Create an account</p>
+          </div>
+
+      </fieldset>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>form_login_05</title>
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+   <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+  </head>
+  <style>
+  /* reset.css */
+  html,body{margin:0; padding:0;border:0;}
+  h1,h2,h3,h4,h5,h6,p,pre,br,form,ul,li,ol,dl,dd,dt,fieldset,
+  legend,div,label,input{margin:0;padding:0;border:0;}
+  ul,li,ol{list-style:none;}
+
+  /* mornalize */
+  .hidden{display:block;width:0;height:0;overflow:hidden;}
+
+  /* design */
+  #wrap{width:600px; height:400px;background-color:#ccc;margin:0 auto;padding:30px 150px;box-sizing:border-box;}
+    form{width:300px;height:auto;}
+    fieldset{width:300px;height:auto;background-color:#a3f;padding:20px 50px ;box-sizing:border-box;}
+    #sign_in{width:100%; height:50px;}
+    #username{width:100%;height:50px;margin-bottom:10px;color:#fff;}
+    #password{width:100%;height:50px;margin-bottom:10px;color:#fff;}
+    #checking{margin-bottom:10px;color:#fff;font-size:8pt;}
+    #login_btn{width:100%;height:50px;background-color:#3d0;color:#fff;}
+    #forgot{font-size:8pt;color:#fff; border-bottom:3px;float:left;}
+
+
+
+
+  </style>
+  <body>
+    <div id="wrap">
+    <form action="#" method="post"> 
+    <fieldset>
+    <legend class="hidden">login_box</legend>
+
+      <div id="sign_in">
+        <a href="#">sign in</a>
+        <a href="#">join us</a>
+      </div>
+
+      <div id="username">
+        <label for="idname">Username</label><br />
+        <input type="text" id="idname" name="idname" value="" />
+      </div>
+
+      <div id="password">
+        <label for="pwd">Password</label><br />
+        <input type="password" id="pwd" name="pwd" value="" />
+      </div>
+
+      <div id="checking">
+        <input type="checkbox" id="checking" value="checking" name="checking" />
+        <label for="checking">Keep me signed in</label>
+      </div>
+
+      <div id="login_btn">
+        <input type="submit" id="login_btn" name="login_btn" value="Sing in" />
+      </div>
+
+      <div id="forgot">
+        <p>Forgot password?</p>
+        <p>Create an account</p>
+      </div>
+    
+    </fieldset>
+    </div>
+  </body>
+</html>

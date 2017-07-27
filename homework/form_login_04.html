@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <title>form_login_04</title>
+</head>
+<style>
+    /* reset.css */
+  html,body{margin:0; padding:0;border:0;}
+  h1,h2,h3,h4,h5,h6,p,pre,br,form,ul,li,ol,dl,dd,dt,fieldset,
+  legend,div,label,input{margin:0;padding:0;border:0;}
+
+  /* mornalize */
+  .hidden{display:block;width:0;height:0;overflow:hidden;}
+
+  /* design */
+   #wrap{width:600px;height:500px;background-color:#ccc;margin:0 auto;}
+   form{width:100%; height:auto; padding:100px; box-sizing:border-box;}
+   fieldset{width:400px; height:auto;background-color:#fff;}
+     fieldset>div{padding:1em;box-sizing:border-box;}
+     legend{width:100%;height:100px;background-color:#33f;color:#fff;font-size:20pt;padding:20px;box-sizing:border-box;}
+     #username{width:100%; height:80px;}
+     #password{width:100%; height:80px;}
+      input[type="text"],input[type="password"]{width:100%; height:100%;border-bottom:1px solid #333;}
+    #longin_button{width:100%; height:auto;}
+     #login_botton{width:60px; height:40px;float:right; margin-bottom: 1em;background-color:#f60;}
+    
+
+
+
+</style>
+<body>
+  <div id="wrap">
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Login</legend>
+      <div id="username">
+        <label for="idname" class="hidden">아이디를 입력해주세요</label>
+        <input type="text" name="idname" id="idname" value="" placeholder="idname" />
+      </div>
+      <div id="password">
+        <label for="pwd" class="hidden">패스워드를 입력해주세요</label>
+        <input type="password" name="pwd" id="pwd" value="" placeholder="password" />
+      </div>
+      <div id="remember">
+        <input type="checkbox" id="rememberid" name="rememberid" value="rememberid" />
+        <label for="rememberid">Remember Me</label>
+      </div>
+      <div id="longin_button">
+        <input type="submit" id="login_botton" name="login_botton" value="LOGIN">
+      </div>
+
+    </fieldst>
+    </form>
+  </div>
+</body>
+</html>

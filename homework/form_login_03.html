@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>form_login_03</title>
+</head>
+<style>
+  /* reset.css */
+  html,body{margin:0; padding:0;border:0;}
+  h1,h2,h3,h4,h5,h6,p,pre,br,form,ul,li,ol,dl,dd,dt,fieldset,
+  legend,div,label,input{margin:0;padding:0;border:0;}
+
+  /* mornalize */
+  .hidden{display:block;width:0;height:0;overflow:hidden;}
+
+  /* design */
+  #wrap{width:600px;height:500px;margin:0 auto;background-color:#ccc;padding:50px 100px;box-sizing:border-box;}
+    form{width:400px;height:400px;}
+    fieldset{width:400px;height:400px;background-color:#fff;}
+    legend{width: 100%; height: auto;  text-align: center; padding-top: 2em; padding-bottom: 2em; background-color: #fad;}
+    fieldset>div{width:100%;height:50px;background-color:#f93;margin-bottom:5px;}
+    input{text-indent:5px; width:100%;height:100%;}
+
+
+</style>
+<body>
+  <div id="wrap">
+    <h1 class="hidden">log_in</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Please login</legend>
+          <div>
+            <label for="username" class="hidden">username</label>
+            <input tyle="text" id="username" name="username" value="" placeholder="user name">
+          </div>
+          <div>
+            <label for="password" class="hidden">password</label>
+            <input tyle="text" id="password" name="password" value="" placeholder="password">
+          </div>
+          <div>
+            <input type="checkbox" id="remember_me" name="remember_me" value="remember_me">
+            <label for="remember_me">Remember me</label>
+          </div>
+          <div>
+            <input type="submit" value="Login">
+          </div>
+
+
+  </div>
+</body>
+</html>

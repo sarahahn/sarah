@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>form_login_01</title>
+
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+   <!--[if lte IE 9]>
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif-->
+
+  </head>
+<style>
+  /* reset.css */
+    html,body{margin:0;padding:0;}
+    h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,ul,li,ol,dd,dt,dl{margin:0; padding:0;}
+    ul,li,ol{list-style:none;}
+
+  /* normalize */
+    .hidden{display:block;width:0;height:0;overflow:hidden;}
+
+  /* Design */
+    #wrap{width:900px;height:500px;margin:0 auto;padding:0;background-color:#ccc;}
+    
+
+
+</style>
+<body>
+  <div id="wrap">
+    <h1 class="hidden">form_login_01</h1>
+      <form action="#" method="post">
+        <fieldset>
+          <legend class="hidden">login</legend>
+
+            <!-- id -->
+            <div class="user">
+              <label for="username">사용자명</label>
+                <input type="text" id="username" name="username" value="" placeholder="사용자명">
+            </div>
+
+             <!-- pwd -->
+            <div class="pwd">
+              <label for="pwd">비밀번호</label>
+                <input type="password" id="pwd" name="pwd" value="" placeholder="비밀번호">
+            </div>
+
+            <!-- checkbox -->
+            <div class="checkbox">
+                <label for="rememberid">기억하기</label>
+              <input type="checkbox" id="rememberid" name="rememberid" value="rememberid">
+            </div> 
+
+            <!-- button -->
+            <div class="button">
+              <input type="submit" name="ok" value="로그인">
+            </div>
+
+        </fieldset>
+      </form>
+  </div>
+
+
+
+
+</body>
+</html>
