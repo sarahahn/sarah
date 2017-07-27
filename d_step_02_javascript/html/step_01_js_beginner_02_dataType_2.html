@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- step_01_js_beginner_02_dataType_2.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>undefined and hoist의 개념</h1>
+  
+    <script>
+      var xido, guy;
+
+      console.log(xido);  //javascript는 절차 지향. 그래서 옆과 같이 값이 없는 형태를 먼저 쓴다면 undefined가 발생한다. 
+      var xido = 'goodGuy';
+      console.log(xido);
+
+      // hoist 현상
+      // 지정된, 할당된 이름(변수)이 최 상단으로 끌어올려지는 것.
+
+      var guy = 'xido';
+
+    </script>
+  
+</body>
+</html>

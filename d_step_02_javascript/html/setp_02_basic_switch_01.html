@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>swtich 변수</title>
+</head>
+<script>
+  // switch 처리
+var MyRank=function(myrank){
+  var rank; // =myrank.toUpperCase(); (if문으로 내려씀.)
+
+  if(myrank.length==1){
+    rank=myrank.toUpperCase();
+  }else{
+    console.log('작성하는 글자는 '+ myrank+' 입니다.');
+    console.log('영문 알파벳 한자리 글자를 입력하세요.');
+  }
+
+  switch(rank){
+    case'A':
+    console.log('당신은 A랭크로 최고 등급입니다.');
+    break; //-----------------------------------------
+    case'B':
+    console.log('당신은 B랭크로 잘하는 등급입니다.');
+    break; //-----------------------------------------
+    case'C':
+    console.log('당신은 C랭크로 분밠하십시오.');
+    break;  //----------------------------------------
+    default:
+      console.log('당신은 랭크외 입니다. 공부나 하세요.');
+  } // swtich끝.
+}; //var MyRank=function(myrank)의 끝.
+
+</script>
+<body>
+
+</body>
+</html>

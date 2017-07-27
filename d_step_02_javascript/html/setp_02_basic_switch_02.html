@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>switch구문</title>
+</head>
+<script>
+  // 성적표 만들기
+  // 0 ~ 50 : D등급
+  // 51 ~ 70 : C등급
+  // 71~85 : B등급
+  // 86~100 : A등급
+  var score=function(num){
+    var grade=num;
+    if(0<=grade && grade <=50){console.log('50점 이하, D등급');}//else{console.log('50점 이상, D등급 이상.');} 
+      else if(51<=grade && grade<=70){console.log('C등급 입니다.');}
+      else if(71<=grade && grade<=85){console.log('B등급 입니다.');}
+      else if(86<=grade && grade<=100){console.log('A등급 입니다.');}
+      else{console.log('잘못된 값을 입력하였습니다.');}
+      //else가 마지막으로 쓰는 것이기에, else if라고 작성해준 이후, 맨 마지막에 else라고 써준다. 
+      // 이때, else에는 질문이 될 조건이 필요가 없다. 
+
+      var switchBox=function(num){
+      switch(grade){
+        case'A':
+        console.log('A등급');
+        break;//----------------
+        case'B':
+        console.log('B등급');
+        break;//----------------
+        case'c':
+        console.log('C등급');
+        break;//----------------
+        case'D':
+        console.log('D등급');
+        break;//---------------
+      default:
+        console.log('등급외, 나머지공부 당첨');
+      }// switch끝
+    }// switchBox끝
+  }; // var score = function(num)의 끝 
+</script>
+<body>
+  
+</body>
+</html>

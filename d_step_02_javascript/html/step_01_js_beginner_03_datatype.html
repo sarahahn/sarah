@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">  
+  <title>javascript dataTyoe</title>
+</head>
+<body>
+  <h1>javascript dataType</h1>
+  <h2>기본 자료형</h2>
+  <ul>
+    <li>숫자</li>
+    <li>문자</li>
+    <li>논리</li>
+    <li>특수 : undefined</li>
+    <li>특수 : null</li>
+  </ul>
+
+  <h2>참조 자료형</h2>
+  <ul>
+    <li>배열</li>
+    <li>객체</li>
+    <li>함수</li>
+  </ul>
+
+  <!-- javascript -->
+  <script>
+    //기본 자료형
+    //숫자
+
+    var num=1;
+    console.log(num);
+    console.log(typeof(num));
+    console.log(typeof(1));
+    console.log(1);
+    console.log(num+10);
+    console.log(1+10);
+
+    var plusNum=num+100;
+    console.log(plusNum);
+
+    var hynum = num+100;
+    console.log(hynum+'1');
+    console.log(typeof(hynum+'1'));  // 1011 숫자101+문자'1'
+
+    /* typeof : data형식 파악하는 것. (method라고도 함.)
+               어떠한 실행을 할 수 있는 명령어. */
+
+    // 문자
+    var changeNum = parseInt(hynum + '1');
+    //parseInt : parse + integer 의 뜻. 값을 숫자로 치환시키는 기능.
+    console.log(changeNum+100);
+
+    var hy="hayoung";
+    console.log(typeof(hy));
+    var hyChange = parseInt(hy);
+    console.log(hyChange);  // 결과값은 NaN으로 뜬다!!
+
+    //NaN: 숫자가 아님이라는 error 메세지.
+
+    hy = hy+100; // 'hayoung'+100 => hayoung100 (자신의 이름을 hayoung로 바꾸겠습니다.! 라는 의미)
+    var hh = hy +100; 
+    console.log(hy); // hayoung100
+    console.log(typeof(hy)); // hayoung100
+    console.log(parseInt(hy));  // 결과값은 NaN으로 나타남. 
+
+    hy = 100 + hy;  //100+'hayoung100' => 100hayoung100
+    console.log(typeof(hy));
+    console.log(parseInt(hy));  // parseInt는 앞부분부터 숫자로 인지할 수 있는 영역까지 변환처리 함. 
+                                // 다시 말하면, 무엇이 앞으로 오는지에 따라 parseInt의 값이 달라짐. 
+                                // 문자가 먼저 오면 string, 숫자가 먼저 오면 number로 인식됨.
+    
+    //boolean: true/false
+    var boo=true;
+    console.log(!boo);
+    console.log(boo);
+    console.log(!!boo); // 반대의 반대니까 value는 true. 
+
+    //!의 의미: not(반대의 개념)
+    //a[href!="#"]{}  => #가 아닌 다른 모든 것.
+
+    //undefined / null
+
+    var un;
+    console.log('un:', un); // undefined
+
+    un = null;
+    console.log(un);  // null
+
+    un = '어떠한 값을 넣을 수 있다. '
+    console.log(un);
+
+    un = null 
+    console.log(un);  // 값을 삭제함. 
+
+    // 비교
+
+    var zero, none, nothing;
+    zero = 0;
+    nothing=null; 
+    console.log(zero, none, nothing);
+    console.log(zero == none == nothing);
+    console.log(zero == none);
+    console.log(zero == nothing);
+    console.log(none == nothing);
+    console.log(none === nothing);  // ===는 형 타입까지 일치하는가?를 보는 것.
+ 
+  </script>
+</body>
+</html>

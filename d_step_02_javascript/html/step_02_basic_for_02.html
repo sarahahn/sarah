@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>fieldset안에 for구문 사용하기2</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>전화번호 입력</legend>
+      <laber for="first">앞자리 선택</laber>
+      <select name="" id="first">
+        <script>
+          // 방법 1 
+          // var area=['서울','경기','광주','울산','부산','충남','충북','경남','경북','강원','제주'];
+          // for(var i=0; i<area.length; ++i){
+          //   document.write('<option value=" ' +area[i]+ '">' + area[i] +'</option>'
+          // }
+
+          // 방법2
+          var area={'서울':02,'경기':031,'광주':03,'울산':04,'부산':05,'충남':06,'충북':07,'경남':08,'경북':09,'강원':10,'제주':11};
+          document.write('<option value=""' + area2.서울+ '</option>');
+
+        </script>
+      </select>
+
+      <laber for="middle">가운데 번호 입력</laber>
+      <input type="text" maxlength="4" id="middle" name="middle" value="" placeholder="4자리 번호 입력">
+
+      <laber for="last">가운데 번호 입력</laber>
+      <input type="text" maxlength="4" id="last" name="last" value="" placeholder="4자리 번호 입력">
+    </fieldset>
+  </form>
+</body>
+</html>

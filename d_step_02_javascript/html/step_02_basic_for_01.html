@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>fieldset안에 for구문 사용하기</title>
+</head>
+<body>
+  <form action="" method="post">
+    <fieldset>
+      <legend>생년월일 선택하기</legend>
+      <laber for="year">태어난 해</laber>
+      <select name="" id="year">
+        <script>
+          // for(var i=1917; i<=2017; i++){
+          //   document.write('<option>'+i+'</option>');
+          //   }
+          // 1번 방안
+          var i=2017;
+          var j=i-150;
+          for(; i>=j; i--){
+            document.write('<option>'+i+'</option>');
+          }
+          // 2번 방안
+        </script>
+      </select>
+
+      <laber for="month">월</laber>
+      <select name="" id="month">
+        <script>
+          for(var i=1; i<=12; i++){
+            document.write('<option>'+i+'<option>');
+            }
+        </script>
+      </select>
+
+      <laber for="day">일</laber>
+      <select name="" id="day">
+        <script>
+        for(var i=1; i<=31; i++){
+            document.write('<option>'+i+'</option>');
+            }
+        </script>
+      </select>
+    </fieldset>
+  </form>
+</body>
+</html>
