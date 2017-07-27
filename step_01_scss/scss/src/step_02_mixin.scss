@@ -1,0 +1,69 @@
+/* step_02.mixin.css */
+@import "../_setting/base";
+// 1 영역구분 (nesting처리)
+// 2 @mixin test1
+@mixin border(){
+  border-bottom:2px solid #fff;
+  padding-bottom:5px;
+}
+//step_3 @mixin test2 -link첨부
+@mixin link(){
+  &:hover{background-color:#6fa;}
+  >a{width:100%; height:100%; display:block;}
+}
+//step_4 @mixin test_3_값 변경
+@mixin change($color:#afc, $font:#111){
+// $color:#afc --> 주어진 값이 없을 경우, 기본 색상은 #afc로 하시오! 라는 뜻. 
+  & > a{transition:all 0.3s ease-out;}
+  &:hover>a{background-color:#{$color}; color:#{$font}; font-size:2em}
+         // "background-color:$color"라고 써도 되지만, 어떠한 이유에서인지
+         // 값이 불러지지 않는 경우가 있다!!! 그럴때 쓰는 방법이 interpolation이다. 
+         // "background-color:#{$color}"  이렇게 작성해주면 된다!!!!
+}
+
+#wrap{
+  >h1{float:left}
+  #gnb{width:600px; height:70px; float:right;
+    h2{width:0; height:0; position:absolute; z-index:-100; overflow:hidden;}// #gnb>h2
+    ul{width:100%;height:100%;
+      >li{height:100%;float:left;margin-left:10px; 
+          @include border; @include link;
+          &:first-child{margin-left:0}
+          
+          &:nth-child(1){@include change(#60f, #f6f);}
+          &:nth-child(2){@include change($color:#175);}
+                      // color와 font두 종류중 하나만 작성하는 경우.
+          &:nth-child(3){@include change(#06f, #f62);}
+          &:nth-child(4){@include change();}
+                     // 기본값만 작성하는 경우.
+          &:nth-child(5){@include change(#6ff, #f6a);}
+        } // #gnb li
+
+
+/* 또는 하기와 같이 작성해도 됨!
+      >li{height:100%;float:left;margin-left:10px; 
+          @include border; @include link;
+          &:first-child{margin-left:0}} // #gnb li  --> 여기서 닫고, 
+          
+          >li:nth-child(1){@include change;}
+          >li:nth-child(2){@include change;}
+          >li:nth-child(3){@include change;}
+          >li:nth-child(4){@include change;}
+          >li:nth-child(5){@include change;}
+        } */
+
+
+//  "&"는!! '그리고'의 뜻,  
+//  css에서는 li의 값을 두번 나눠 썻다면, 
+//  scss에서는 li의 값을 {}안에 같이 한꺼번에 작성할 수 있다. 
+
+//extend와 mixin의 차이
+//extend: 값을 변경할 수 없다.
+//mixin: 값을 변경할 수 있다.  
+
+
+    }// #gnb>ul
+  }// #gnb
+}// #wrap
+
+// scss의 원칙:  한 파일당 200줄을 넘지 않는 것이 원칙! 가독성을 위함!

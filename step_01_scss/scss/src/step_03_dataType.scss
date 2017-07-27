@@ -1,0 +1,40 @@
+//step_03_dataType.scss
+/* step_03_dataType.css */
+
+//number : 숫자
+//string : 문자
+//color : 색상
+// list : 목록
+// map : object
+//boolean : 참(true) / 거짓(false) (css에서 bool로 표기됨.)
+// null : 없음 (무)
+// boolean과 null은 ""로 감싸지 않는다. 
+
+// --- 형타입(dataType)
+//type-of()
+//data()
+
+$type:10000;
+
+$aa:();  //여기서의()는 list를 사용하겠다는 뜻!
+$aa1:11, 33, 55;
+$aa2:(11), (33), (55);
+// $aa~aa2까지 전부 list라는 같은 뜻.
+
+$bb:(a:#aa5);  //(key:value로 나타나는 값은 map으로 표현함.)
+.type{content:type-of(10);}
+.type{content:type-of(100px);}
+.type{content:type-of("");}
+.type{content:type-of(text);}
+// 인식하지 못하는 모든 것을 text로 인식하기는 하지만, 
+// 정확한 표현을 하기 위해 ""를 꼭 써줘야 한다. !
+.type{content:type-of($type);}
+.type{content:type-of("$type");}
+.type{content:type-of(rgba(100,200,250,0.4));}
+.type{content:type-of(#f06);}
+.type{content:type-of("#fa0");}
+.type{content:type-of($aa);}
+.type{content:type-of($bb);}
+.type{content:type-of(true);}
+.type{content:type-of(false);}
+.type{content:type-of(null);}

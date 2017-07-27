@@ -1,0 +1,20 @@
+// step_02_var.scss      (variable:변수)
+
+$primary:#66f;
+$fontcolor:#fff;
+$white:#f0f0f0;
+$black:#282828;
+$linkcolor:#f6f;
+
+// line
+$linecolor:#0f6;
+$linewidth:1px;
+$line:$linewidth solid $linecolor;
+
+//font
+$fontsize:1em;
+$fontfamily:'myriad pro', arial, sans-serif;
+
+//---------------------------
+%hidden{display:block; width: 0;height:0;position:absolute; z-index:-100;
+        overflow:hidden;}

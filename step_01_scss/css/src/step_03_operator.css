@@ -1,0 +1,23 @@
+/* step_03_operator */
+.box {
+  width: 300px; }
+
+.box2 {
+  width: 300px; }
+
+.box2 {
+  width: 300px; }
+
+.color1 {
+  color: white; }
+
+.color2 {
+  color: #66ffff; }
+
+.color3 {
+  color: yellow; }
+
+.two {
+  width: 33.33333px;
+  height: 43.33333em;
+  font-size: 3rem; }

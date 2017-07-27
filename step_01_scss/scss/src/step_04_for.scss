@@ -1,0 +1,87 @@
+//step_04_for.scss
+/* step_04_for.css */
+
+
+//for : 반복문
+//일정한 간격으로 연속되어진 증가 또는 감소의 기능을
+// 반복하여 처리할때 사용하는 기능
+
+// 사용방법
+/*
+$for $임의변수 시작값 through 마지막값 {
+
+}
+
+  // 여기서, through는 마지막값을 포함, (시작값 포함)
+  // to를 사용하면, 마지막값을 포함하지 않음. (시작값 포함)
+
+// through <=, >= : 이상, 이하 [let ie 9]
+// to <,> : 초과, 미만
+
+*/
+
+/*
+li:nth-child(1){background-image:url(img_1.png);}
+li:nth-child(2){background-image:url(img_2.png);}
+li:nth-child(3){background-image:url(img_3.png);}
+li:nth-child(4){background-image:url(img_4.png);}
+li:nth-child(5){background-image:url(img_5.png);}
+*/
+// for문은 값이 연속되어져야만 사용 가능, 
+// 만약 연속되어지지 않다면 each를 사용한다!
+
+// @for문의 $i는 임의변수.! 그래서 윗부분의 값이 없어도 "1 through 5"가 있어, 
+//반복할 수 있다. 
+@for $i from 1 through 5 {
+  li:nth-child(#{$i}){background-image:url("img_" + $i + ".png");}
+  li:nth-child(#{$i}):hover{background-image:url("img_" + $i + "_on.png");}
+} 
+
+
+//each : 기본적으로 반복한다는 의미에서 for와 같다. 
+//       하지만, 일정한 간격으로 연속된다는 의미는 아니다. 
+
+
+/*  사용방법 : 
+@each 임의변수 in (각각의 값){
+
+}
+*/
+
+@each $h in (3, 10, 5, 15){
+  li:nth-child(#{$h}){background-image:url("img_"+$h+".png")}
+}
+
+@each $k in (americano, latte, viena, compana, mocha){
+  .coffee_#{$k}{background-image:url($k+".png");}
+  .coffee_#{$k}:hover{background-image:url($k+"_on.png");}
+}
+ 
+// /* 
+// each3  -->  똑같은 코드이지만, 다르게 표현 
+// $myTea : (americano, latte, viena, compana, mocha);
+
+// @each $k in $myTea{
+//   .coffee_#{$k}{background-image:url($k+".png");}
+//   .coffee_#{$k}:hover{background-image:url($k+"_on.png");}
+//  */
+
+
+
+/* for 2 : 하기와 같이 작성하는 경우, for문으로 작성한 것이라
+           연속되는 것이 맞다! 근데 이 상태에서, $myColor를 내 마음대로 
+           작성해서 사용할 수 있기 때문에 결국 반복되지 않는 값으로도 
+           사용하는 것 처럼 보일 수 있다. */
+//nth(변수명, 변수값의 위치) -- list기능을 사용시
+$myColor:(#333, #137, #f07, #afc, #f9a, #7f4, #0f1, #9af, #d81, #851);
+
+@for $l from 1 through 7{
+  li:nth-child(#{$l}){color:nth($myColor, $l);}
+}
+
+
+/* for 3 */
+//length(변수명) -- list의 갯수 파악 시
+@for $l from 1 through length($myColor){
+  .box_#{$l}{color:nth($myColor, $l);}
+}

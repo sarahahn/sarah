@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* step_04_for.css */
+/*
+$for $임의변수 시작값 through 마지막값 {
+
+}
+
+  // 여기서, through는 마지막값을 포함, (시작값 포함)
+  // to를 사용하면, 마지막값을 포함하지 않음. (시작값 포함)
+
+// through <=, >= : 이상, 이하 [let ie 9]
+// to <,> : 초과, 미만
+
+*/
+/*
+li:nth-child(1){background-image:url(img_1.png);}
+li:nth-child(2){background-image:url(img_2.png);}
+li:nth-child(3){background-image:url(img_3.png);}
+li:nth-child(4){background-image:url(img_4.png);}
+li:nth-child(5){background-image:url(img_5.png);}
+*/
+li:nth-child(1) { background-image: url("img_1.png"); }
+
+li:nth-child(1):hover { background-image: url("img_1_on.png"); }
+
+li:nth-child(2) { background-image: url("img_2.png"); }
+
+li:nth-child(2):hover { background-image: url("img_2_on.png"); }
+
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(3):hover { background-image: url("img_3_on.png"); }
+
+li:nth-child(4) { background-image: url("img_4.png"); }
+
+li:nth-child(4):hover { background-image: url("img_4_on.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(5):hover { background-image: url("img_5_on.png"); }
+
+/*  사용방법 : 
+@each 임의변수 in (각각의 값){
+
+}
+*/
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(15) { background-image: url("img_15.png"); }
+
+.coffee_americano { background-image: url(americano.png); }
+
+.coffee_americano:hover { background-image: url(americano_on.png); }
+
+.coffee_latte { background-image: url(latte.png); }
+
+.coffee_latte:hover { background-image: url(latte_on.png); }
+
+.coffee_viena { background-image: url(viena.png); }
+
+.coffee_viena:hover { background-image: url(viena_on.png); }
+
+.coffee_compana { background-image: url(compana.png); }
+
+.coffee_compana:hover { background-image: url(compana_on.png); }
+
+.coffee_mocha { background-image: url(mocha.png); }
+
+.coffee_mocha:hover { background-image: url(mocha_on.png); }
+
+/* for 2 : 하기와 같이 작성하는 경우, for문으로 작성한 것이라 연속되는 것이 맞다! 근데 이 상태에서, $myColor를 내 마음대로  작성해서 사용할 수 있기 때문에 결국 반복되지 않는 값으로도  사용하는 것 처럼 보일 수 있다. */
+li:nth-child(1) { color: #333; }
+
+li:nth-child(2) { color: #137; }
+
+li:nth-child(3) { color: #f07; }
+
+li:nth-child(4) { color: #afc; }
+
+li:nth-child(5) { color: #f9a; }
+
+li:nth-child(6) { color: #7f4; }
+
+li:nth-child(7) { color: #0f1; }
+
+/* for 3 */
+.box_1 { color: #333; }
+
+.box_2 { color: #137; }
+
+.box_3 { color: #f07; }
+
+.box_4 { color: #afc; }
+
+.box_5 { color: #f9a; }
+
+.box_6 { color: #7f4; }
+
+.box_7 { color: #0f1; }
+
+.box_8 { color: #9af; }
+
+.box_9 { color: #d81; }
+
+.box_10 { color: #851; }

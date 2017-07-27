@@ -1,0 +1,30 @@
+/* step_01.scss */
+
+@import "../_setting/base";
+//@import기능 : 링크기능, css에서 링크를 걸어주는 것처럼
+//              용량을 줄여주기위해 base로 기본 변수값을 설정해주고, scss파일에 값을 끌어오는(링크) 방법이다. 
+//              이때, base 문서와 scss의 문서가 따로 구분되어 존재해야 한다. 
+//              그리고, import기능에서 link 맨 마지막의 확장자명과, _(언더바)를 쓰지 않아도, (파일명만 작성해도) 어떤 문서인지 알아챈다. 
+
+#wrap{width:100%; min-width:960px; height:auto; min-height:1000px; margin:-0px auto; background-color:$primaryColor;} 
+  #headBox{width:100%;height:150px;background-color:darken($primaryColor,10%);
+           h1{color:$primaryColor;}
+           h1:hover{color:darken($primaryColor,50%);} //h1
+           }//headBox
+  #adBox{width:100%;height:450px;background-color:light($basicColor,20%); 
+         h2{width:100%;height:auto;background-color:$blue;
+            &:hover{color:darken($primaryColor,50%)}} // #h2
+         } // #adBox
+
+    /* h2를 따로 작성하는 경우, 문서에 있는 모든 h2에 값이 들어가겠지만, 
+       adBox{h2{..}..}라고 작성하게 되면, adBox안에 있는 h2에만 값이 적용됨. */
+    // 이를 nesting기법이라고 한다. (중첩) 
+    // nesting기법 중 또 하나는 "&"이다. 
+    // 상기 adBox>h2부분을 보면, &:hover가 있는데, 이는 headBox>h1:hover처럼 따로 또 쓰는 것이 아니라,
+    // adBox>h2처럼  &(그리고, 같은 h2에다가) hover하게 되면, 값을 적용시켜라! 라는뜻이다. 
+    /* nesting기법에서 주의할 점! 
+        1. 중괄호{}가 많아지기 때문에, 되도록 4개 이상은 사용하지 마시길..
+        2. 중괄호{}가 끝나는 부분엔 반드시 해당 영역의 주석을 달아주어라! */
+
+  #content{width:100%;height:500px;background-color:darken($primaryColor,30%);}
+  #footBox{width:100%;height:50px;background-color:darken($primaryColor,40%);}

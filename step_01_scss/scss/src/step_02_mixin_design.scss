@@ -1,0 +1,26 @@
+/* step_02_mixin_ex.css */
+
+// ----기본 설정파일 불러오기-----------------------------
+// 변수설정  
+@import "../_setting/step_02_var";
+// mixin설정
+@import "../_setting/step_02_mixin";
+
+// test--------------------------------------------------
+
+
+// ----layout design-------------------------------------
+#wrap{@include baselayout($w:960px, $c:transparent); margin:0 auto;}
+
+  #headBox{@include baselayout($h:100px, $c:lighten($primary,10%));} 
+    h1{width:150px;height:50px;margin:0 auto;
+      @include link($f:"img/green_logo.jpg");
+    //hoisting현상 : 값을 최상단으로 올라가서 설정
+}// h1
+
+    
+  #gnb{width:100%;height:50px;margin-top:10px;border-top:$line;}
+
+  #adBox{@include baselayout($h:400px, $c:lighten($primary,17%));}
+  #contentBox{@include baselayout($h:800px, $c:lighten($primary,25%));}
+  #footBox{@include baselayout($h:150px, $c:$primary);} 

@@ -1,0 +1,4 @@
+/* test.scss */
+body { background-color: #fac; margin: 0; padding: 0; }
+
+h1 { padding: 1em; color: #a33; background-color: #a06; }

@@ -1,0 +1,31 @@
+//step_03_maos.scss
+/* step_03_maps.css */
+
+//maps(object) 형태
+//$maps:(key:value, key:value, key:value);
+// maps: 동일한 조건들이 있지만, 값은 전부 다를때 사용.
+// maps의 장점: 유지보수가 쉽고 빠르게 처리 가능하다. 
+
+//  (무엇이:무엇이다, 선택:값);
+
+li{color:#afc; font-size:1em;}
+
+
+$color:(
+  primary:#f06,
+  basic:#0f6,
+  sub1:#777,
+  sub2:#890
+  );
+$font:(
+  primary:#333,
+  basic#178:
+  sub1:#9a0,
+  sub2:#9a7
+  );
+
+// maps의 형태를 가져와서 사용할 경우, 
+// map-get();
+// map-get(변수 이름, 변수의 내부에 있는 속성명);
+li{background-color:map-get($color, primary);
+   color:map-get($font,primary);}
