@@ -1,0 +1,89 @@
+//main.scss
+/* main.css */
+
+@import "../base/variable";
+@import "../base/mixin";
+
+//@import "./layout/header";
+//@import "./layout/main_etc";
+//@import "./layout/footer";
+
+
+%hidden{width: 0;height: 0;display: block;
+        position: absolute; z-index:-100; overflow:hidden;}
+
+#wrap{width:980px; height:auto; margin:0 auto; background-color:#ccc;}
+#wrap:after{content:" "; display:block; clear:both;}
+
+//sideBox
+
+
+#sideBox{width:100%; height:30px; 
+         background-color:map-get($color, primary);float:left; 
+         >h2{@extend %hidden;}
+         >ul{width:435px;height:100%; float:right;
+             >li{width:95px; height: 100%;float:left;}
+             >li:last-child{width:245px;}
+             
+
+             a{@include link($f:"aside.png", $f2:"aside_on.png");}
+             $sideLink:(-545px 0, -640px 0, right 0);
+             @for $i from 1 through length($sideLink){
+              >li:nth-child(#{$i})>a{background-position:nth($sideLink, $i);}
+            }
+
+               // a{width: 100%;height: 100%;display: block;
+               //   background-image:url();background-repeat: ;background-position: 0 0;
+               //   >span{width: 0;height: 0;display: block;overflow: hidden;position: absolute;}
+               // } //a
+           } // ul
+       } // sideBox
+
+//---------------------------
+//---------------------------
+
+
+
+
+#headBox{width:250px; height:auto; min-height:710px;background-color:map-get($color,primary);float:left;
+         padding:55px 55px 104px 40px; box-sizing:border-box;
+         a{@include link($f:"header/header.png",$f2:"header/header_on.png", $p:0 0);}
+         >h1{width: 100%;height: 105px;margin-bottom: 40px;
+         }
+         >#gnb{width: 100%;height: 416px;
+          >h2{@extend %hidden;}
+          ul{width: 100%;height:auto;
+            >li{width: 100%;height:38px; margin-bottom: 25px;}
+            >li:nth-last-child(2){margin-bottom: 8px;}
+            >li:last-child{height: 112px;margin-bottom: 0;}
+
+// list 각각 값을 입력했을 때!
+            // >li:nth-child(1)>a{background-position:0 -144px;}
+            // >li:nth-child(2)>a{background-position:0 -206px;}
+            // >li:nth-child(3)>a{background-position:0 -268px;}
+            // >li:nth-child(4)>a{background-position:0 -331px;}
+            // >li:nth-child(5)>a{background-position:0 -393px;}
+            // >li:nth-child(6)>a{background-position:0 -438px;}
+// 또는 상기 list를 하기와 같이 반복문인 if로 작성해도 된다!
+            $gnbLink:(0 -144px,
+                      0 -205px,
+                      0 -268px,
+                      0 -331px,
+                      0 -393px,
+                      0 -438px);
+            @for $i from 1 through length($gnbLink){
+              >li:nth-child(#{$i})>a{background-position:nth($gnbLink, $i);}
+            }//@for
+
+            // a{
+            //   >span{}  
+            // }
+          }//ul
+         }//#gnb
+       }//#headBox
+
+#contentBox{width:(980-250)+px; height:auto; min-height:710px;
+            background-color:#ffa;float:left;}
+
+#footBox{width:100%; height:110px; border-top:1px solid map-get($color, line);
+          background-color:map-get($color, white);float:left}
