@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>this의 활용</title>
+</head>
+<body>
+  <script>
+    function person(name, time){
+      this.name = name;
+      this.time = time;
+      this.study = name + '가르치는 수업' + this.time + '에 합니다.';
+    };
+
+    var p1 = new person('하이영', '09:30~20:00');
+    var p2 = new person('혜빈찡', '09:30~17:30');
+    var p3 = new person('앵란쓰', '09:30~16:30');
+    var p4 = new person('방학', 'everyDay');
+
+    // 같은 형식(정해진 형식)에서 필요한 값만 불러오는 경우 사용
+    // 예를 들어, 사이트의 banner사진상에서 같은 효과를 사용하지만, 
+    // 다른 사진으로 대체하는 경우, 또는
+    // 게시판에서 같은 형식을 사용하지만, 
+    // 내용을 다르게 작성해야 하는 경우에 사용한다. 
+    
+  </script>
+</body>
+</html>
