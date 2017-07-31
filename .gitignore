@@ -53,3 +53,7 @@ graphich/**
 
 #exe 
 **/*.exe
+
+#mp3 / mp4 제한
+**/*.mp3
+**/*.mp4
