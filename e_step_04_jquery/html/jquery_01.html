@@ -40,7 +40,7 @@
     .gnb>li:after{content:" "; display:block; width: 2px;height: 80%;background-color:#888;position:absolute; right: -5%; top: 10%;}
     .gnb>li:last-child{margin-right: 0;}
     .gnb>li:last-child:after{display: none;}
-    .gnb>li>a{padding:0.2em; color:#fff;}
+    .gnb>li>a{padding:0.2em;}
     .gnb>li>a:hover{font-weight:bold;}
 
   </style>
@@ -67,8 +67,50 @@
       $('#wrap').css({'backgroundColor':'#cfc', 'width':100+'%'});
       $('.head_box').css({'width':900+'px','backgroundColor':'#076'});
       $('h1').css({'textAlign':'center','lineHeight':50+'px', 'fontSize':2+'em'});
+      // $('.gnb>li:after').css({'backgroundColor':'#ffa'});
+      $('.gnb a').css({'color':'#0a4'});
+      // 
+      // 하기 주석과 gnb>li의 표현은 다 같은 표현
+      // $('.gnb >li:nth-child(1)').css({'backgroundColor':'#faa'});
+      // $('.gnb >li:first-child').css({'backgroundColor':'#faa'});
+      // $('.gnb >li:first').css({'backgroundColor':'#faa'});
+      // $('.gnb >li').eq(0).css({'backgroundColor':'#faa'});
+      //$('.gnb').children('li').eq(0).css({'backgroundColor':'#faa'}).find('a').css({'color':'#fff'});
+      $('.gnb').children('li').eq(0)
+               .css({'backgroundColor':'#faa'})
+               .find('a').css({'color':'#fff'});
+      // $('.gnb >li:nth-child(2)').css({'backgroundColor':'#ffa'});
+      $('.gnb >li').eq(1).css({'backgroundColor':'#ffa'});
+      $('.gnb >li:nth-child(3)').css({'backgroundColor':'#afa'});
+      $('.gnb >li:nth-child(4)').css({'backgroundColor':'#aaf'});
+      $('.gnb >li:last').css({'backgroundColor':'#f60'});
+      $('.gnb').find('a').css({'fontSize':'1.2em'});
 
-      // 또는 '900px' 이라고 써도 된다. 그리고! 기본단위가 px이다. 그래서 900이라고만 써줘도 된다. 
+      // 숫자+단위 쓸때, '900px' 이라고 써도 된다. 그리고! 기본단위가 px이다. 그래서 900이라고만 써줘도 된다. 
+
+      // eq : 몇번째 순서라는 기능으로, javascript 자체의 언어, 
+      //      javascript의 언어이기 때문에, 시작은 0부터 이다. 
+      // 이와 비슷한 언어들은 하기와 같다. (javascript / jquery언어 다 된다.)
+      //   -  $('?').eq(n)
+      //   -  $('?').children(n)
+      //   -  $('?').find(n)
+      //   -  $('?').siblings(n) : 형제
+      //   -  $('?').parent(n)
+
+      // event 메소드  .on()
+      //wvwnt메소드의 특징 : 카멜케이스로 사용하지는 않는다. 
+      var gnb = $('.gnb');
+      gnb.children('li').on('mouseenter',function(){
+        // mouseenter는 마우스를 올리면 기능을 하고, 내렸을 때는 기능이 원래대로 돌아오지 않는다. 한번 변하고 끝!!. 
+        $(this).parent(gnb)
+               .css({'backgroundColor':'transparent'});
+        $(this).siblings('li')
+               .css({'backgroundColor':'#171717','color':'#fa0'});
+      });
+
+      // gnb.children('li').on('mouseout',function(){});
+      // 위에서도 쓸 수 있지만, 밑에다가 써도 된다. 
+
 
     })(this.jQuery) // 즉시 실행 함수. (body에서 함수 작성 방법)
   </script>

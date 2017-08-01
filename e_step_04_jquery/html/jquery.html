@@ -5,7 +5,9 @@
   <title>juqery란?</title>
 </head>
 <body>
-  <h1>jquery란?</h1>
+  <h1>jquery</h1>
+
+  <h2>jquery란?</h2>
     <p>javascript의 라이브러리<br />
     복잡하고 어려운 자바스크립트의 코드를 좀 더 쉽고 빠르게 작성하도록 만들어진 도구</p>
     <dl>
@@ -16,8 +18,23 @@
       <dd>기존의 플러그인(jQuery를 좀 더 쉽게 만드는 도구)을 여러개 겹치는 경우(3개 이상 사용시 특히) 해결이 .... 답이 없다. <br />
           되도록, 최소한의 플러그 인을 사용하도록..!!</dd>
       <dd>어떠한 제어를 할 때 사용하는 것이 좋다. </dd>
+      <dd>짧고 편하다!</dd>
     </dl>
 
+
+  <h2>jquery 선택자에 대하여. </h2>
+  <p>css와 같은 표현</p>
+  <p>표현 식 : $('#id')  or  $('.class')</p>
+  <p>이렇게 써준다!! --> $('.gnb >li').eq(1).css({'backgroundColor':'#ffa'});</p>
+  <p>여기서! eq()라는 것은 child의 순서를 나타내 줌. </p>
+  <p>이와 비슷한 언어들이 몇개 있다. </p>
+  <ul>
+    <li>$('?').eq(n)</li>
+    <li>$('?').children(n)</li>
+    <li>$('?').find(n)</li>
+    <li>$('?').siblings(n) : 형제</li>
+    <li>$('?').parent(n)</li>
+  </ul>
 </body>
 </html>
 
