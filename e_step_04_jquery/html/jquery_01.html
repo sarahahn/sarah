@@ -40,8 +40,9 @@
     .gnb>li:after{content:" "; display:block; width: 2px;height: 80%;background-color:#888;position:absolute; right: -5%; top: 10%;}
     .gnb>li:last-child{margin-right: 0;}
     .gnb>li:last-child:after{display: none;}
-    .gnb>li>a{padding:0.2em;}
-    .gnb>li>a:hover{font-weight:bold;}
+    .gnb>li>a{padding:0.2em; color:#fff; transition: all 300ms;}
+    .gnb>li>a:hover{font-weight:bold;font-size:2em; border-bottom:2px solid;}
+    .add_banner{width: 100%;height: 500px;background-color:#ccd;}
 
   </style>
 </head>
@@ -57,7 +58,9 @@
         <li><a href="#">list_05</a></li>
       </ul>
     </div>
+    <div class="add_banner">add_banner</div>
   </div>
+
 
 
   <!-- jquery -->
@@ -113,6 +116,11 @@
 
 
     })(this.jQuery) // 즉시 실행 함수. (body에서 함수 작성 방법)
+    // 또한, 끝에 this.jquery라고 작성하지 않는 경우에는 
+    // 차후, 다른 javascript의 언어와 혼동(error)이 올 수 있으므로, 
+    // 반드시 this.jQuery라고 작성하여 보호처리 해주는 것이 좋다. 
   </script>
+
+
 </body>
 </html>
