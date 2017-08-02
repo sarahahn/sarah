@@ -27,14 +27,19 @@
   <p>표현 식 : $('#id')  or  $('.class')</p>
   <p>이렇게 써준다!! --> $('.gnb >li').eq(1).css({'backgroundColor':'#ffa'});</p>
   <p>여기서! eq()라는 것은 child의 순서를 나타내 줌. </p>
-  <p>이와 비슷한 언어들이 몇개 있다. </p>
+  <p>이와 비슷한 언어들이 몇개 있다. <br />
+        javascript(하기)</p>
   <ul>
-    <li>$('?').eq(n)</li>
-    <li>$('?').children(n)</li>
-    <li>$('?').find(n)</li>
-    <li>$('?').siblings(n) : 형제</li>
-    <li>$('?').parent(n)</li>
-    <li>$('?').index(n) : </li>
+    <li>$('li').eq(0) // 순서를 선택</li>
+    <li>$('ul').children('li')</li>
+    <li>$('ul').find('li')</li>
+    <li>$('dd').siblings(n) : 형제</li>
+    <li>$('li').parent(n)</li>
+    <li>$('li').index(n) : 순서를 탐색</li>
+    <li>$('li:first')</li>
+    <li>$('li:last')</li>
+    <li>$('li:nth-child(odd)')</li>
+    <li>$('li:nth-child(even)')</li>
   </ul>
   <p>매뉴바 등등을 효과적으로 나타내는 것들</p>
   <ul>
@@ -47,6 +52,46 @@
     <li>toggle() : 기능이 show/hide 두가지밖에 없음.. jquery에서만 쓸 수 있고, javascript에서는 사용 불가.</li>
     <li>fadeToggle() : display:block과 display:none을 처리함. </li>
     <li>slideToggle() : </li>
+    <li>.addClass() : </li>
+    <li>.removeClass() : </li>
+    <li>.toggleClass() : </li>
+
+    <p>event</p>
+    <p>$('선택]').on('[이벤트]', function(event){
+         event.preventDefault();  <!-- 여기서의 event는 상기(event와 같음) -->
+        });</p> <!-- preventDefault : 먼저 발생하는 기능을 취소하겠따! -->
+    <p>ex)</p>
+
+    <p>text</p>
+    <a href="">text</a> // location=""; 와 같다. (클릭 시, ~~ 로 이동하세요!)
+
+    <dl>
+      <dt>javascript event메소드의 종류</dt>
+        <dd>'click' : 왼버튼만 누르는 것을 쉽게 확인</dd>
+        <dd>'dblclick' : 더블클릭 (왼버튼)</dd>
+        <dd>'mousedown' : 마우스 누르고 있는 것 (왼:1 / 가운데:2 / 오른:3)</dd>
+        <dd>'mouseup' : 마우스 떼고 있는 것 (왼:1 / 가운데:2 / 오른:3)</dd>
+        <dd>'keydown' : 키보드 누르는 것</dd>
+        <dd>'keyup': 키보드 떼는 것</dd>
+        <dd>'keypress' : 키보드를 치는 것(down/up을 합친 기능</dd>
+        
+        <dd>'mouseenter' : </dd>
+        <dd>'mouseleave' : </dd>
+        <dd>'mouseover' : </dd>
+        <dd>'mouseout' : </dd>
+  
+        <dd>'scroll' : </dd>
+        <dd>'mousewheel' : fire fox에 대해서는 별도로 처리.</dd>
+        <dd>'resize' : </dd>
+        
+        <dd>'focus' : 창 활성화 되는 것</dd>
+        <dd>'blur' : </dd>
+
+        <dd>'trigger' : 스크롤이라든지 등등 일정 동작들을 하다가 정해진 구간에서 실행하는 것.</dd>
+        <dd>'draggable' : </dd>
+    </dl>
+
+
   </ul>
 </body>
 </html>
