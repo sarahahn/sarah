@@ -7,7 +7,11 @@
   <script src="../js/jquery/jquery-ui.min.js"></script>
   <title>Document</title>
   <style>
-    li{padding:0.5em; background-color:#faa; margin:0.2em;}
+  ul,ol{width: 100%;height: auto;}
+  ul:after, ol:after{content:" ";display:block;clear:both;}
+    li{padding:0.5em; background-color:#faa; margin:0.2em;float: left;}
+    li:hover{background-color: #c9f; color:#fff;}
+  
   </style>
 </head>
 <body>
@@ -36,7 +40,33 @@
       <li><a href="#">링크달린 순서_07</a></li>
       <li><a href="#">링크달린 순서_08</a></li>
       <li><a href="#">링크달린 순서_09</a></li>
-      <li><a href="#">링크달린 순서_10</a></li>
+      <li><a href="http://www.naver.com">링크달린 순서_10</a></li>
+    </ol>
+
+    <ul class="btn_num">
+      <li><button type="button">버튼의 역할_1</button></li>
+      <li><button type="button">버튼의 역할_2</button></li>
+      <li><button type="button">버튼의 역할_3</button></li>
+      <li><button type="button">버튼의 역할_4</button></li>
+      <li><button type="button">버튼의 역할_5</button></li>
+      <li><button type="button">버튼의 역할_6</button></li>
+      <li><button type="button">버튼의 역할_7</button></li>
+      <li><button type="button">버튼의 역할_8</button></li>
+      <li><button type="button">버튼의 역할_9</button></li>
+      <li><button type="button">버튼의 역할_10</button></li>
+    </ul>
+
+    <ol class="select_go">
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_01</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_02</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_03</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_04</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_05</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_06</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_07</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_08</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_09</button></li>
+      <li><button type="button">선택한 순서에 맞는 다른 요소 변경_10</button></li>
     </ol>
 
    <!-- script -->
@@ -67,6 +97,40 @@
 
         // console.log( $(this).index() );
       });// LinkNum.on('click')종료
+      // ----------------------------------------------
+
+
+      // 3----------------------------------------------
+      var btnNum = $('.btn_num').children('li');
+      // btnNum을 클릭했을 때 ( .on('click', function(){}); )
+        btnNum.on('click',function(evt){
+          // button의 이벤트 발생 효과 무효화 처리
+          evt.preventDefault();
+          console.log( $(this).index() );
+
+          // 선택한 개체의 배경색을 변경
+          btnNum.css({'backgroundColor':'#aff'});
+          $(this).css({'backgroundColor':'#afa'});
+
+        });
+      // ----------------------------------------------
+
+
+      // 4 ----------------------------------------------
+        var selGo = $('.select_go').children('li');
+        //selGo 클릭 이벤트
+        selGo.on('click',function(e){
+          e.preventDefault();
+          console.log( $(this).index() );
+          var i = $(this).index();
+          // .number의 자식 li
+          // 자식 : children
+          // 자손 : find
+          // $('.number').find('');
+          // 변수처리된 아이를 가져오기
+          // .number의 자식 li의 내가 선택한 순서와 동일한 순서에 색상 변경하기
+          numberList.eq(i).css({'backgroundColor':'#ffd', 'color':'#0a3', 'height':50+'px'});
+        });
       // ----------------------------------------------
 
     })(this.jQuery);
