@@ -65,9 +65,15 @@
 
       // 3. 선택한 dt의 바로 뒤에 존재하는 dd만을 나타나게 만들어라!
       // 이때 사용하는 메소드 : next()
-      // 선택한 것 $(this)
+      // on()를 통해 이벤트가 발생된 것(선택한 것)  $(this)
+
+      // 클릭시 다시 올라오도록 slideToggle을 사용함.
         var _$this = $(this);
-        _$this.next('dd').show();
+        // _$this.next('dd').stop().slideToggle();
+
+      // 4. 다른 것을 클릭했다면, 먼저 열려있던 메뉴항목은 닫히도록 처리.
+        conMenu.stop().slideUp();
+        _$this.next('dd').stop().slideToggle();
       });
 
 
