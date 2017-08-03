@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>jquery_slide</title>
+  <style>
+    #wrap{width: 100%;height: auto; min-width:960px; height: auto; margin: 0 auto;}
+    #wrap:after{content:" "; display: block; clear:both;}
+    #headBox{width: 100%;height: auto;padding:0.5em; box-sizing:border-box;background-color:#afc; float:left;}
+    h1{font-size: 2em; color:#539; font-weight:bold;}
+    #sideBox{width: 20%; min-width: 200px; height:auto; background-color:#dfd; float:left; min-height: 500px;}
+    #contentBox{width: 80%; min-width:740px; height:auto; background-color:#fda; float:left; min-height: 500px; padding:1em;box-sizing:border-box;}
+      #contentBox dl{width: 100%;height: auto;padding:0.2em; background-color: #fff;border:1px solid #333;}
+      #contentBox dt{width: 100%; height: 1.5em; background-color:#7af; color:#fff;font-size:1.3em; 
+                      transition:all 300s ease-out; border-top:1px solid #777;}
+      #contentBox dt:hover{background-color:#3af;}
+      #contentBox dd{width: 100%; height: auto; padding:0.5em; box-sizing: border-box; background-color:#d1d1d1; color:#555;}
+      #contentBox dd:hover{background-color:#ccc;}
+      button{font-size: 1em; color:inherit;}
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>세로형 슬라이드 메뉴상자 만들기</h1>
+    </header>
+    <aside id="sideBox"></aside>
+    <article id="contentBox">
+      <dl>
+        <dt><button type="button">slide title_01</button></dt>
+        <dd><strong>slide_content_01</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, cupiditate!</dd>
+        <dt><button type="button">slide title_02</button></dt>
+        <dd><strong>slide_content_02</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto exercitationem consectetur nihil recusandae repellendus natus sequi molestias praesentium dignissimos dolore.</dd>
+        <dt><button type="button">slide title_03</button></dt>
+        <dd><strong>slide_content_03</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore dignissimos, exercitationem, necessitatibus in et minus. Illo aperiam cupiditate molestias eum sit dolor voluptatibus itaque, inventore, veniam numquam dignissimos nihil.</dd>
+        <dt><button type="button">slide title_04</button></dt>
+        <dd><strong>slide_content_04</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea nam delectus ad, nobis voluptatibus quis, magni sit sint corporis iure at, vero deleniti perferendis sunt architecto quos nisi quasi nesciunt recusandae voluptatem quibusdam voluptatum quas. Quia eligendi pariatur sunt.</dd>
+        <dt><button type="button">slide title_05</button></dt>
+        <dd><strong>slide_content_05</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero numquam tempore non? Laudantium omnis molestias praesentium. Natus aperiam quas consequuntur ea aliquid ad dicta architecto recusandae voluptas similique neque deserunt eos reiciendis illum molestiae impedit officia perspiciatis tempora ipsa, voluptates quibusdam accusantium eveniet minima ducimus! Voluptate sit neque itaque incidunt?</dd>
+      </dl>
+    </article>
+  </div>
+  <script>
+    (function($){
+      //---------------------------------------
+
+      var content = $('#contentBox');
+      var conMenu = content.find('dd');
+      var conBtn = content.find('dt');
+
+      // 1. 모든  dd를 숨기기(display:none; 처리)
+      //    dd.css({'display':'none'});
+      conMenu.hide(); // conMenu.css({display:'none'});와 동일한 기능
+
+      // 2. dt를 클릭하면 dd를 나타나게 만들기
+      conBtn.on('click', function(e){
+        e.preventDefault();
+        // 단순하게 show명령어로는 모든 dd가 나타나게 된다. 
+        // conMenu.show(); // conMenu.css({display:'block'});과 동일한 기능
+
+      // 3. 선택한 dt의 바로 뒤에 존재하는 dd만을 나타나게 만들어라!
+      // 이때 사용하는 메소드 : next()
+      // 선택한 것 $(this)
+        var _$this = $(this);
+        _$this.next('dd').show();
+      });
+
+
+
+
+      //---------------------------------------
+    })(this.jQuery);
+  </script>
+</body>
+</html>
