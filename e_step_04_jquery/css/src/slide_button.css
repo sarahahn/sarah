@@ -12,5 +12,20 @@ body{overflow-x:hidden;}
 #addBanner{width: 100%;height: 550px;background-color:#ffa;}
 
 #contentBox{width: 960px;height: 1000px;margin: 0 auto; background-color:#ccc;}
+  .slide_btn{width: 250px;height: auto;min-height:200px;position:fixed;left:0; top:100;z-index:500;border-radius:0.5em; 
+             border:2px solid #777;background-color: #fff; box-shadow:0.2em 0.2em 0.2em #333, -1em -1em;}
+  .slide_btn>h3{width: 100%;height: auto;background-color:#0af; color:#fff; margin-bottom:0.3em;}
+  .slide_btn>button{width: 100px;height: 35px;background-color:#0af; position: absolute; right:-100px;top:1em;z-index:500;
+                    color:#fff; font-size:1.2em;}
+  .slide_btn>button:hover{background-color:#07a;}
+  .slide_btn>ul{width: 100%;height: auto;padding:0 10%; box-sizing: border-box;}
+  .slide_btn>ul>li{width: 100%; height: 100px; background-color:#afc; border-radius:100px; overflow: hidden;}
+  .slide_btn>ul>li>a{background-size:cover; background-position:center; transition:all 500ms;}
+  .slide_btn>ul>li:nth-child(1)>a{background-image:url("../../img/ir1.jpg");}
+  .slide_btn>ul>li:nth-child(2)>a{background-image:url('../../img/jd1.jpg');}
+  .slide_btn>ul>li:nth-child(3)>a{background-image:url('../../img/wb1.jpg');}
+  .slide_btn>ul>li:nth-child(1)>a:hover{background-image:url('../../img/ir2.jpg');}
+  .slide_btn>ul>li:nth-child(2)>a:hover{background-image:url('../../img/jd2.jpg');}
+  .slide_btn>ul>li:nth-child(3)>a:hover{background-image:url('../../img/wb2.jpg');}
 
 #footBox{width: 100%;height: 120px;background-color:#555; box-sizing: border-box; padding:1.5em 0.7em 0.3em; color:#fff;}
