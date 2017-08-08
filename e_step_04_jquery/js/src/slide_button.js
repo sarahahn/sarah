@@ -52,12 +52,12 @@ slide_btn.addClass('leftMove');
 // clikc시 .leftMove를 삭제처리하게 만들음. 
 slide_button.on('click',function(e){
   e.preventDefault();
-  // slide_btn.removeClass('leftMove');
-  slide_btn.toggleClass('leftMove',500);
+  var slide_left = parseInt(slide_btn.css('left'));
+  if(slide_left < 0){
+  slide_btn.removeClass('leftMove',500);
+  // slide_btn.toggleClass('leftMove',500);
 // if문을 이용하여 이모지(이모티콘) 변경 처리
 slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
-});
-
 
 // 그렇다면!!!! 열기글자와 닫기글자 기능 토글을 사용하려면?????
 // console.log( slide_button.text() );  // 어떤 text내용이 들어있는지 확인.
@@ -66,6 +66,16 @@ slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
 // console.log( slide_button.text('닫기') );
 // console.log( slide_button.html('<div>닫기') ); // text와 html의 차이점 : html은 코드까지 바꾼다. 
 slide_button.find('span').text('닫기');
+
+}else{
+  // slide_btn.removeClass('leftMove',500);
+  slide_btn.addClass('leftMove',500);
+  slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
+  slide_button.find('span').text('열기');
+}
+
+
+});
 
 
 
