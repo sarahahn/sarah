@@ -52,35 +52,74 @@ slide_btn.addClass('leftMove');
 // clikc시 .leftMove를 삭제처리하게 만들음. 
 slide_button.on('click',function(e){
   e.preventDefault();
+  
   var slide_left = parseInt(slide_btn.css('left'));
-  if(slide_left < 0){
-  slide_btn.removeClass('leftMove',500);
-  // slide_btn.toggleClass('leftMove',500);
-// if문을 이용하여 이모지(이모티콘) 변경 처리
-slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
+  // hasClass() : class이름의 존재 유무를 판단(true/false)
+  // is()       : class뿐 아니라 다른 내용도 판단 가능
 
-// 그렇다면!!!! 열기글자와 닫기글자 기능 토글을 사용하려면?????
-// console.log( slide_button.text() );  // 어떤 text내용이 들어있는지 확인.
-// console.log( slide_button.html() );  // 어떤 html요소와 text내용이 들어있는지 확인.
-                                        // 요소코드로 작성하지 않으면 글자로 인지
-// console.log( slide_button.text('닫기') );
-// console.log( slide_button.html('<div>닫기') ); // text와 html의 차이점 : html은 코드까지 바꾼다. 
-slide_button.find('span').text('닫기');
+  //var slide_left = parseInt(slide_btn.css('left'));
+  // var slide_left = slide_btn.hasClass('leftMove');
+  // console.log(slide_left);
+  var slide_left = slide_btn.is('.leftMove');
+  console.log(slide_left);
 
-}else{
-  // slide_btn.removeClass('leftMove',500);
-  slide_btn.addClass('leftMove',500);
-  slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
-  slide_button.find('span').text('열기');
-}
+
+
+    if(slide_left){
+  //   slide_btn.removeClass('leftMove',500);
+  //   // slide_btn.toggleClass('leftMove',500);
+  // // if문을 이용하여 이모지(이모티콘) 변경 처리
+  // slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
+  
+  // // 그렇다면!!!! 열기글자와 닫기글자 기능 토글을 사용하려면?????
+  // // console.log( slide_button.text() );  // 어떤 text내용이 들어있는지 확인.
+  // // console.log( slide_button.html() );  // 어떤 html요소와 text내용이 들어있는지 확인.
+  //                                         // 요소코드로 작성하지 않으면 글자로 인지
+  // // console.log( slide_button.text('닫기') );
+  // // console.log( slide_button.html('<div>닫기') ); // text와 html의 차이점 : html은 코드까지 바꾼다. 
+  // slide_button.find('span').text('닫기');
+
+  // }else{
+  //   // slide_btn.removeClass('leftMove',500);
+  //   slide_btn.addClass('leftMove',500);
+  //   slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
+  //   slide_button.find('span').text('열기');
+
+  
+  }
 
 
 });
 
+// if(parseInt(slide_btn.css('left') < 0)){
+  
+var timed = 500;
 
+slide_button.on('mouseenter',function(event){
+  event.preventDefault();
+  slide_btn.css({'transform':'translateX(20px)','transition':'all '+timed+'ms'});
+});
 
-// 버튼에 마우스 올렸을 경우 .slide_btn이 살짝 나오기 (약 10px정도)
+slide_button.on('mouseleave',function(event){
+  event.preventDefault();
+  slide_btn.css({'transform':'translateX(0px)','transition':'all '+timed+'ms'});
+});
 
+// } // if
+
+// ----------------------
+
+// $('moveBox').css({left:'-230px'});
+// var timed = 500;
+// // 버튼에 마우스 올렸을 경우 .slide_btn이 살짝 나오기 (약 10px정도)
+// slide_button.on('mouseenter',function(event){
+//   event.preventDefault();
+//   slide_btn.animate({'left':'-230px'}, timed);
+// });
+// slide_button.on('mouseenter',function(event){
+//   event.preventDefault();
+//   slide_btn.animate({'left':'-230px'}, timed);
+// });
 
 
 //------------------------------------------------
