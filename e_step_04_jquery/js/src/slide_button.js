@@ -24,7 +24,14 @@
 
 // 1. .me_link이름을 .slide_btn>ul에 적용
 // show/hide - fadeIn/fadeOut - slideDown/slideup - addClass/removeClass 사용
-$('.slide_btn>ul').addClass('me_link');
+// $('.slide_btn>ul').addClass('me_link');  // 변수 지정하였으므로 주석처리.
+var slide_btn=$('.slide_btn');
+var slide_ul=slide_btn.children('ul');
+var slide_li=slide_ul.children('li');
+var slide_button=$('.slide_btn').find('button');
+var slide_icon = slide_button.find('i');
+
+slide_ul.addClass('me_link');
 
 // 2. .slide_btn>ul>li의 가로값을 세로에도 적용(가로 == 세로)
 // 괄호 안에 숫자 입력하면 데이터 적용, 작성하지 않으면 불러오기
@@ -34,8 +41,35 @@ $('.slide_btn>ul').addClass('me_link');
 //   $('slide_btn>ul>li').outerWidth(); // border포함
 //   $('slide_btn>ul>li').outerWidth(ture);  // margin값 포함
 
+
 var slide_li_width = $('.slide_btn>ul>li').width();
 $('.slide_btn>ul>li').height(slide_li_width);
+
+slide_btn.addClass('leftMove');
+
+
+// click이벤트('열기버튼'누르면 나오게 만들기)
+// clikc시 .leftMove를 삭제처리하게 만들음. 
+slide_button.on('click',function(e){
+  e.preventDefault();
+  // slide_btn.removeClass('leftMove');
+  slide_btn.toggleClass('leftMove',500);
+// if문을 이용하여 이모지(이모티콘) 변경 처리
+slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
+});
+
+
+// 그렇다면!!!! 열기글자와 닫기글자 기능 토글을 사용하려면?????
+// console.log( slide_button.text() );  // 어떤 text내용이 들어있는지 확인.
+// console.log( slide_button.html() );  // 어떤 html요소와 text내용이 들어있는지 확인.
+                                        // 요소코드로 작성하지 않으면 글자로 인지
+// console.log( slide_button.text('닫기') );
+// console.log( slide_button.html('<div>닫기') ); // text와 html의 차이점 : html은 코드까지 바꾼다. 
+slide_button.find('span').text('닫기');
+
+
+
+// 버튼에 마우스 올렸을 경우 .slide_btn이 살짝 나오기 (약 10px정도)
 
 
 
