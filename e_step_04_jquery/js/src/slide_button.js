@@ -65,7 +65,7 @@ slide_button.on('click',function(e){
 
 
 
-    if(slide_left){
+    // if(slide_left){
   //   slide_btn.removeClass('leftMove',500);
   //   // slide_btn.toggleClass('leftMove',500);
   // // if문을 이용하여 이모지(이모티콘) 변경 처리
@@ -86,24 +86,24 @@ slide_button.on('click',function(e){
   //   slide_button.find('span').text('열기');
 
   
-  }
+//   }
 
 
-});
+// });
 
 // if(parseInt(slide_btn.css('left') < 0)){
   
 var timed = 500;
 
-slide_button.on('mouseenter',function(event){
-  event.preventDefault();
-  slide_btn.css({'transform':'translateX(20px)','transition':'all '+timed+'ms'});
-});
+// slide_button.on('mouseenter',function(event){
+//   event.preventDefault();
+//   slide_btn.css({'transform':'translateX(20px)','transition':'all '+timed+'ms'});
+// });
 
-slide_button.on('mouseleave',function(event){
-  event.preventDefault();
-  slide_btn.css({'transform':'translateX(0px)','transition':'all '+timed+'ms'});
-});
+// slide_button.on('mouseleave',function(event){
+//   event.preventDefault();
+//   slide_btn.css({'transform':'translateX(0px)','transition':'all '+timed+'ms'});
+// });
 
 // } // if
 
@@ -121,6 +121,33 @@ slide_button.on('mouseleave',function(event){
 //   slide_btn.animate({'left':'-230px'}, timed);
 // });
 
+  if( slide_left ){
+    slide_btn.removeClass('leftMove', 500);
+    slide_icon.removeClass('fa-arrow-right').addClass('fa-arrow-left');
+    slide_button.find('span').text('닫기');
+    // slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+    slide_btn.css({'marginLeft':'0', 'transition':'all '+timed+'ms'});
+  }else{
+    slide_btn.addClass('leftMove', 500);
+    slide_icon.removeClass('fa-arrow-left').addClass('fa-arrow-right');
+    slide_button.find('span').text('열기');
+  }
+});
+
+  var timed = 500;
+  // 3. 버튼에 마우스 올렸을경우 .slide_btn이 살짝 나오기(약 10px정도)
+  slide_button.on('mouseenter', function(event) {
+    event.preventDefault();
+    if(parseInt(slide_btn.css('left')) < 0 ){
+      // slide_btn.css({'transform':'translateX(20px)', 'transition':'all '+timed+'ms'});
+      slide_btn.css({'marginLeft':'20px', 'transition':'all '+timed+'ms'});
+    }
+  });
+  slide_button.on('mouseleave', function(event) {
+    event.preventDefault();
+    // slide_btn.css({'transform':'translateX(0)', 'transition':'all '+timed+'ms'});
+    slide_btn.css({'marginLeft':'0', 'transition':'all '+timed+'ms'});
+  });
 
 //------------------------------------------------
 })(this.jQuery);
