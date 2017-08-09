@@ -1,0 +1,38 @@
+/* reset css */
+@import url("../font/nanumBarunGothic/stylesheet.css");
+@import url("../font/kt_sangsang/stylesheet.css");
+/* line 5, D:/work/ncs_web_2/web/xido/css/reset.scss */
+*, html, body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: top;
+  font: normal normal 100%/120% ktg_l,nanum_n,"myriad pro", arial, nanumGothic, dotum, sans-serif;
+  color: #333; }
+
+/* line 10, D:/work/ncs_web_2/web/xido/css/reset.scss */
+ul, ol, li {
+  list-style: none; }
+
+/* line 11, D:/work/ncs_web_2/web/xido/css/reset.scss */
+a {
+  text-decoration: none;
+  color: #333; }
+  /* line 12, D:/work/ncs_web_2/web/xido/css/reset.scss */
+  ahover {
+    text-decoration: underline;
+    color: #aaa; }
+
+/* line 14, D:/work/ncs_web_2/web/xido/css/reset.scss */
+tabel, tr, td, th {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #333; }
+
+/* html5 */
+/* line 20, D:/work/ncs_web_2/web/xido/css/reset.scss */
+header, article, aside, footer, nav, figure, banner {
+  display: block; }
+
+/*# sourceMappingURL=reset.css.map */

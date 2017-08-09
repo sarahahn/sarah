@@ -1,0 +1,53 @@
+/* line 1, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+#gallery {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+/* line 3, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+.largeImg {
+  width: 100%;
+  height: 400px;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative; }
+  /* line 5, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+  .largeImg img {
+    width: 100%; }
+
+/* line 8, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+.thumbImg a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  float: left;
+  border: 1px solid #777;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 15px; }
+  /* line 11, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+  .thumbImg a img {
+    height: 100%; }
+
+/* line 16, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+span {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(50, 50, 50, 0.8);
+  display: none;
+  float: left; }
+
+/* line 19, C:/Users/Administrator/Desktop/jquery_2015/css/gallery_01.scss */
+#caption {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(100, 100, 100, 0.5);
+  position: absolute;
+  z-index: 300;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 10px;
+  top: -30px; }
+
+/*# sourceMappingURL=gallery_01.css.map */

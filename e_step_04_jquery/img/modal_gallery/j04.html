@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+	 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <style>
+    h1{ margin:20px 50px; font-size:large; border-bottom:1px solid #7BAEB5; 
+        padding:10px; width:600px; }
+    ul{ width:700px; }
+    ul li{ float:left; list-style-type:none; }
+    ul> li>a> img{ border:0; margin:10px; }
+        
+    div#glayLayer{ position:fixed; left:0; top:0; height:100%; width:100%;
+        background:black; filter:alpha(opacity=60); opacity:0.60; display: none;}
+    #overLayer{ position: fixed; top:50%; left:50%; margin-top:-300px; margin-left:-512px; display:none;}
+</style>
+<script>
+    $(document).ready(function(){
+        
+        var layer = $('#glayLayer, #overLayer');
+        $('a').on('click', function(e){
+            e.preventDefault()
+            layer.show().find('img').attr('src', $(this).attr('href'))
+        });
+            layer.on('click', function(){
+            layer.hide()
+        });
+            
+    });
+</script>
+</head>
+<body>
+    <h1>jQuery 를 이용한 모달윈도우 작성</h1>
+    <ul>
+    <li><a href="img/j01_big.jpg" class="modal"><img src="img/j01.jpg" alt="설명" /></a></li>
+    <li><a href="img/j02_big.jpg" class="modal"><img src="img/j02.jpg" alt="설명" /></a></li>
+    <li><a href="img/j03_big.jpg" class="modal"><img src="img/j03.jpg" alt="설명" /></a></li>
+    <li><a href="img/j04_big.jpg" class="modal"><img src="img/j04.jpg" alt="설명" /></a></li>
+    <li><a href="img/j05_big.jpg" class="modal"><img src="img/j05.jpg" alt="설명" /></a></li>
+    <li><a href="img/j06_big.jpg" class="modal"><img src="img/j06.jpg" alt="설명" /></a></li>
+    <li><a href="img/j07_big.jpg" class="modal"><img src="img/j07.jpg" alt="설명" /></a></li>
+    <li><a href="img/j08_big.jpg" class="modal"><img src="img/j08.jpg" alt="설명" /></a></li>
+    </ul>
+    <div id='glayLayer'></div>
+    <div id='overLayer'><img src='img/j01_big.jpg' /></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

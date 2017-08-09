@@ -1,0 +1,47 @@
+/* reset */
+@import "sample.scss";
+
+
+*,html,body,h1,h2,h3,h4,h5,h6,p{
+	margin:0; padding: 0; border: 0; outline: 0; vertical-align: top;
+	line-height: 120%; color:$main_text;
+	font:{style:normal;
+					weight: normal;
+					size: 100%; 
+					family:  "myriad pro", my_font, arial, nanumGothic,dotum, sans-serif;					
+	}
+}
+ul,li,ol{ list-style: none;}
+a{text-decoration: none; color:$main_text; 
+	&:hover{color:$sub_text;}
+}
+table,tr,td,th{border-collapse: collapse; border-spacing: 0;
+		border: 1px solid #333;}
+
+/* html5용 코드 진행 */
+section, header, nav, aside, article, footer,figure,video,banner {display: block;}
+
+
+
+@mixin hidden { display: block;
+	width:0; height: 0; overflow: hidden; font-size:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
