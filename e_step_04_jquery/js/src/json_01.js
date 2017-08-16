@@ -43,4 +43,53 @@
     }
 
 
+// ------------------------------------------------------------------------------
+// ※ 사이트 링크 주소 넣기!!
+
+var st=[
+    {'name':'naver',    'address':'https://naver.com/'},
+    {'name':'google',   'address':'https://google.com/'},
+    {'name':'w3schools','address':'https://w3schools.com/'},
+    {'name':'darum',    'address':'http://darum.daum.net/'},
+    {'name':'nuli',     'address':'http://nuli.navercorp.com/'},
+  ];
+
+// body에 #webpage만들기
+// $('body').append('<div id = "webpage">');
+// 하지만, 이렇게 만들면, body 문서의 맨 뒤에 만들어 지는데, 
+// 이때, script링크보다 뒤에 만들어지는 것이 문제!!!!!
+// 그래서 before() | after() 를 사용하여 만든다. (생성)
+// before() | after() : 내부가 아닌 형제에서 이전, 또는 이후
+  $('body').find('script').before('<div id = "webpage">');
+
+// 자,,,, 그럼 webpage를 찾아오자!!!
+  var webPage = $('#webpage');
+  var web = webPage.html('<ul>').find('ul');  // #webpage에  ul생성하면서 한번에 변수로 지정할 수 없기 때문에, 생성 후, 변수로 다시 지정해 주어야 한다.  
+  // console.log(web_ul); // ul이 잘 만들어졌는지 확인. 
+  // console.log(web);  // web이 잘 만들어졌는지 확인.
+  
+  // 이제는 li를 만들 것인데, .html또는 .append로 만들 수 있다.!!!
+  // 하지만, for문을 사용할 것이기에, .append를 사용하여 만들어야 한다. 
+  // 왜냐하면 .html은 기존의 내용을 무시하고 덮어씌워 만들기에 한개의 li만 생성되지만, 
+  // .append는 기존의 내용 뒤에 추가하는 것이기 때문에 li가 여러개 생성된다. 
+
+  for(i=0; i<st.length; i++){
+    web.append('<li><a>');  // 여기서!! 닫는  부분이 생략 된 것이기에 알아서 자식요소로 만들어줌. (<li><a></a></li>)
+    console.log(i);
+  }
+
+
+
+
+// 내가 한거임.......
+// var sectionBox = $('#sectionBox');
+// var sectionBox_ul = sectionBox.children('ul');
+// var sectionBox_li = sectionBox_ul.children('li');
+
+// for (i=0; i<6; i++){
+//   sectionBox_li.eq(i).html('<span>');
+//   sectionBox_li.eq(i).find('span');.text(st[i].name);
+// }
+
+
 })(this.jQuery);
