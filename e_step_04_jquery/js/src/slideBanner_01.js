@@ -44,12 +44,13 @@ btn_r.on('click', BtnR);
     //   }); // .on
 
 function BtnR(e){
-      e.preventDefault();
+      // e.preventDefault();
           banner_group.stop().animate({marginLeft:-200+'%'}, timed, function(){
             var li_fr = banner_group.children('li').first();
               banner_group.append(li_fr);
               banner_group.css({marginLeft:-100+'%'}); 
            });
+          return false;
       }; // .on
 
 

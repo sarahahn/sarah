@@ -1,0 +1,7 @@
+/* json_01.css */
+
+h1{width: 100%;height: auto; padding:1em; color:#177; background-color:#ffa; box-sizing: border-box;}
+#headBox{width: 960px;height: auto;margin: 0 auto; background-color:#faa;}
+#headBox>ul{width: 100%;height:auto;}
+#headBox>ul:after{content:" "; display:block; clear:both;}
+#headBox>ul>li{float:left; margin:0.3em;}
