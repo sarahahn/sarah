@@ -75,21 +75,30 @@ var st=[
 
   for(i=0; i<st.length; i++){
     web.append('<li><a>');  // 여기서!! 닫는  부분이 생략 된 것이기에 알아서 자식요소로 만들어줌. (<li><a></a></li>)
-    console.log(i);
+    // console.log(i);
+    web.find('li').eq(i).find('a').attr('href',st[i].address)
+                                  .text(st[i].name);
+    // 참고! attr([속성명],[변경할 값])
   }
 
+  // 상기 for 문의 정확한 표기법!!!!
+  // var i=0;
+  // var li_eq;
+
+  // for (; i<st.length; i++){
+  //   web.append('<li><a>');
+  //   li_eq = web.find('li').eq(i).find('a');
+
+  //   li_eq.attr('href', st[i].address);
+  //   li_eq.text(st[i].name);
+  // }
 
 
 
-// 내가 한거임.......
-// var sectionBox = $('#sectionBox');
-// var sectionBox_ul = sectionBox.children('ul');
-// var sectionBox_li = sectionBox_ul.children('li');
 
-// for (i=0; i<6; i++){
-//   sectionBox_li.eq(i).html('<span>');
-//   sectionBox_li.eq(i).find('span');.text(st[i].name);
-// }
+
+
+
 
 
 })(this.jQuery);
