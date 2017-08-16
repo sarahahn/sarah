@@ -94,8 +94,47 @@ var st=[
   // }
 
 
+//------------------------------------------------------------
+// ※  img와 alt 넣기!!
+
+  // 1. car list 변수 작성
+  var address = '../img/car/';
+  var car = [
+      {'name':'audi',    'img':'audi.jpg'},
+      {'name':'benz',    'img':'benz.png'},
+      {'name':'hyundai', 'img':'hyundai.png'},
+      {'name':'jagua',   'img':'jagua.jpg'},
+      {'name':'kia',     'img':'kia.png'}
+    ];
+
+    // console.log(address + car[0].img);  // 확인
+  
+
+  // 2. #carMark 만들기
+$('body').find('#webpage').after('<div id = "carMark">');
+
+  // 3. 만들은 carMark를 찾아와서 ul을 만들기
+var brand = $('#carMark');
+var brand_ul = brand.html('<ul>').find('ul');
+var brand_li = brand_ul.children('li');
+
+  //4. for문을 이용하여 li를 만들고, img를 삽입!!
+  i = 0;
+  var myImg, myAlt, liImg;
+  
+  for(; i<car.length; i++){
+    brand_ul.append('<li><img>');
+    // console.log(brand_ul);
+
+    myImg = address+car[i].img;
+    myAlt = car[i].name;
+    liImg = brand_ul.find('li').eq(i).find('img');
 
 
+    liImg.attr('src',myImg);
+    liImg.attr('alt',myAlt);
+    // 또는 한 줄로 작성하면 liImg.attr({'src':myImg, 'alt':myAlt});
+  }
 
 
 
