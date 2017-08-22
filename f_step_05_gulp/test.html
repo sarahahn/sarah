@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <title>gulp_test</title>
+</head>
+<body>
+  <h1>test</h1>
+  <script>
+    (function($){
+      console.log($); // jquery.min.js파일 끌어왔는지 확인.
+      $.getJSON('./test.json',function(data){  // json파일 끌어오기.
+        var jsonFile = data;
+        console.log(jsonFile);
+        console.log(data);
+      });  
+        // 이렇게, $가 바로 앞에오는 형식을 "유틸리티 메서드"라고 한다. 
+        // 이는, 선택자를 먼저 처리하는 것이 아닌, 기능을 먼저 사용하도록 처리.
+        // $.parseJSON : 변환하기.
+    })(this.jQuery);
+  </script>
+</body>
+</html>

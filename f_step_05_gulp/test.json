@@ -1,0 +1,7 @@
+// test.json
+// json방식 = ''가 아닌, ""를 사용해야 한다. 
+
+[
+{"name":"xido","gender":"male","height":"190"},
+{"name":"sarah","gender":"female","height":"170"}
+]
