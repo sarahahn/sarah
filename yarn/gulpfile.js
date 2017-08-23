@@ -54,27 +54,41 @@ var path = {
   sass:{
     src : url.before + '/scss/**/*.scss',
     dist : url.after + '/css'
-  }
+  },
+  html : url.after + '**/*.html'
 };
+
+
+
+  //--- html
+gulp.task('html'function(){
+  return gulp.src(path.html)
+             .pipe(sync.stream()) // 원래는 reload(stream:true)라고 작성하는 것이 맞지만, stream만 작성해도 된다. 
+});
+
+
+
   //--- sass설정
 gulp.task('sass',function(){
   return gulp.src(path.sass.src)
              .pipe(sass().on('error',sass.logError))
              .pipe(gulp.dest(path.sass.dist));
+             .pipe(sync.stream());
 });
   //---서버생성(browser-sync)
 gulp.task('sync',function(){
   return sync.init({
-    port:0511,
+    // port:0511,
     server:{baseDir:url.after}
   });//sync.init
 });//gulp.task
 
 
 
-  //--- 실시간 감지
+  //--- 실시간 감지(watch)
 gulp.task('mywatch', function(){
   gulp.watch(path.sass.src,['sass']);  // 여기에서, ['sass', 'html']처럼 추가 가능, 대신 순서는 지켜주어야 한다!
+  gulp.watch(path.html, ['html']);
 });
 
   //--- gulp명령어 입력하면 바로 수행하는 기능
@@ -85,3 +99,6 @@ gulp.task('mywatch', function(){
 //                                              // 그래서 반드시 default를 작성한 후, 'sass','mywatch'라고 써야
 //                                              // 어떤 기능을 할지 알아채고 실행한다. 
 gulp.task('default',['sync','sass','mywatch']);
+
+
+
