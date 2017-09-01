@@ -34,6 +34,10 @@
     // Math.ceil() ==> 올림
     // Math/round() ==> 반올림
 
+    // $('.my_box').css({transform:'translateX('+ myX +'px)'});
+    $('.my_box').css({transform:'translateX('+ -myX +'px)'+'translateY('+ myY +'px)'});
+    // 변수 앞에 -를 쓰면, 마우스와 반대로 움직이게 됨.
+
 
 
   })// #wrap에서의 mousemov event끝.
