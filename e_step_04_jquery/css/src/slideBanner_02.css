@@ -1,0 +1,29 @@
+/* slideBanner.css */
+#wrap{width: 100%; height: auto; margin:0 auto;}
+  #headBox{width: 960px; height: 100px;background-color:#afc; margin:0 auto;}
+  #slideBanner{width: 100%;height: 600px; position: relative;}
+    .slide_btn{width: 100%; height: 0; position:absolute; left: 0; top:50%; margin-top:-2.5rem;}
+    .slide_btn>div{width: 5rem; height: 5rem; background-color:#ffa; color:#fff; text-align:center; line-height:5rem; 
+                  font-size:3rem; font-weight:bold; border-radius: 5rem; cursor:pointer; transition:300ms ease-in;}
+    .slide_btn>div:hover{background-color:rgba(100,100,100,0.5); box-shadow: 0.3rem 0.3rem 0.3rem rgba(50,50,50,0.5) inset; 
+                         text-shadow:  0.1rem 0.1rem 0.1rem rgba(50,50,50,0.7)}
+    .l_btn{float:left;}
+    .r_btn{float:right;}
+
+
+   #bannerBox{width: 400%; height: 100%;}
+   #bannerBox>li{width: 25%; height: 100%; float:left; font-size:4em; color:#fff; text-align:center; line-height:600px;}
+     .slide_01{background-color:#faa;}
+     .slide_02{background-color:#3fc;}
+     .slide_03{background-color:#afa;}
+     .slide_04{background-color:#aff;}
+
+   .indicator{position:absolute; left:50%; bottom:1rem; margin-left:-3.5rem;}
+   .indicator>li{width: 1rem;height: 1rem; float:left; margin-left:1rem;}
+   .indicator>li:first-child{margin-left:0;}
+   .indicator>li>button{width: 100%;height: 100%;background-color:#f66; border-radius:1rem; overflow: hidden;}
+   .indicator>li.active>button{background-color:#ffa;}
+   .indicator button:focus{background-color:#0aa;}
+
+  #contentBox{width: 960px;height: 1300px;margin:0 auto; background-color:#aac;}
+  #footBox{width: 100%;height: 300px;background-color:#777;}
