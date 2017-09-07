@@ -1,0 +1,220 @@
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+  #wrap > #headBox {
+    width: 100%;
+    height: auto;
+    position: relative; }
+    #wrap > #headBox:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #wrap > #headBox > h1 {
+      width: 150px;
+      height: 60px;
+      background-color: #777;
+      padding: 10px;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      background-image: url(../main/all/header/logo.png);
+      background-repeat: no-repeat;
+      background-position: center; }
+    #wrap > #headBox > #aside {
+      width: 810px;
+      height: 60px;
+      background-color: #f06;
+      float: left;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      #wrap > #headBox > #aside > #sign {
+        width: 310px;
+        height: 40px;
+        background-image: url(../main/all/header/nar.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 300px;
+        float: left; }
+      #wrap > #headBox > #aside > #searchBox {
+        width: 150px;
+        height: 40px;
+        float: left; }
+        #wrap > #headBox > #aside > #searchBox > ul {
+          width: 110px;
+          height: 15px;
+          margin-left: 40px;
+          margin-bottom: 5px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li {
+            width: 23px;
+            height: 15px;
+            margin-right: 15px;
+            float: left;
+            color: #fff;
+            font-weight: bold; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:first-child {
+            width: 30px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:last-child {
+            width: 27px;
+            margin-right: 0; }
+        #wrap > #headBox > #aside > #searchBox > form {
+          width: 150px;
+          height: auto; }
+          #wrap > #headBox > #aside > #searchBox > form > fieldset {
+            width: 150px;
+            height: auto; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > input {
+              width: 130px;
+              height: 20px;
+              float: left; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > button {
+              width: 20px;
+              height: 20px;
+              float: right;
+              background-image: url(../main/all/header/search_btn.png); }
+    #wrap > #headBox > #gnb {
+      width: 810px;
+      height: 30px;
+      position: absolute;
+      z-index: 100;
+      bottom: -60px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin-left: 150px;
+      border-bottom: 1px solid #333;
+      float: left;
+      display: none; }
+      #wrap > #headBox > #gnb > ul {
+        width: 100%;
+        height: 30px; }
+        #wrap > #headBox > #gnb > ul > li {
+          width: 100px;
+          height: 30px;
+          margin-right: 42px;
+          float: left;
+          text-align: center;
+          line-height: 30px;
+          color: #f40;
+          font-weight: bold; }
+          #wrap > #headBox > #gnb > ul > li > a {
+            width: 100%;
+            height: 100%; }
+        #wrap > #headBox > #gnb > ul > li:last-child {
+          margin-right: 0; }
+  #wrap section {
+    width: 100%;
+    height: inherit; }
+    #wrap section > #bannerBox {
+      width: 100%;
+      height: 430px;
+      background-repeat: no-repeat;
+      background-size: 100% 430px; }
+    #wrap section > #forumBox {
+      width: 100%;
+      height: 360px;
+      background-color: #f06;
+      padding: 15px 29px 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      #wrap section > #forumBox > #more {
+        width: 902px;
+        height: 30px;
+        margin-bottom: 15px;
+        position: relative; }
+        #wrap section > #forumBox > #more > h2 {
+          width: 55px;
+          height: 20px;
+          float: left;
+          background-image: url(../main/main/article/ar_box_01_b6.png);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          margin-top: 5px;
+          margin-left: 5px; }
+        #wrap section > #forumBox > #more > button {
+          width: 25px;
+          height: 25px;
+          float: right;
+          background-color: #fff;
+          background-image: url(../main/main/article/more_btn.png);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          border-radius: 25px;
+          margin-top: 5px;
+          margin-right: 5px; }
+      #wrap section > #forumBox > #more:after {
+        content: " ";
+        display: block;
+        width: 780px;
+        position: absolute;
+        z-index: 100;
+        bottom: 10px;
+        border-bottom: 1px solid #fff;
+        left: 70px; }
+      #wrap section > #forumBox > #contentBox {
+        width: 902px;
+        height: 280px; }
+        #wrap section > #forumBox > #contentBox > .link_m {
+          width: 381px;
+          height: inherit;
+          float: left;
+          background-image: url(../main/main/article/article_box_01.png);
+          background-repeat: no-repeat; }
+          #wrap section > #forumBox > #contentBox > .link_m > ul {
+            width: 115px;
+            height: 225px;
+            margin-top: 30px;
+            margin-left: 220px; }
+            #wrap section > #forumBox > #contentBox > .link_m > ul > li {
+              width: 100%;
+              height: 20px;
+              margin-bottom: 21px;
+              line-height: 20px;
+              text-align: center;
+              color: #ffa; }
+              #wrap section > #forumBox > #contentBox > .link_m > ul > li > a {
+                width: 100%;
+                height: inherit;
+                border-bottom: 1px solid #ffa; }
+            #wrap section > #forumBox > #contentBox > .link_m > ul > li:last-child {
+              margin-bottom: 0; }
+        #wrap section > #forumBox > #contentBox > .picture {
+          width: 243px;
+          height: inherit;
+          float: left;
+          background-image: url(../main/main/article/article_box_02.png);
+          background-repeat: no-repeat; }
+        #wrap section > #forumBox > #contentBox > .text_t {
+          width: 278px;
+          height: inherit;
+          float: left;
+          background-image: url(../main/main/article/article_box_03.png);
+          background-repeat: no-repeat;
+          color: #fff;
+          padding: 0 10px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box; }
+          #wrap section > #forumBox > #contentBox > .text_t > div {
+            width: 100%;
+            height: inherit;
+            overflow: hidden; }
+            #wrap section > #forumBox > #contentBox > .text_t > div > p {
+              width: 100%;
+              height: inherit;
+              overflow-y: scroll;
+              padding-right: 2rem; }
+  #wrap #footBox {
+    width: 100%;
+    height: 120px;
+    background-color: #777; }
