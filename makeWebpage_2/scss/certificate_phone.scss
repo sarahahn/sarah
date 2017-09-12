@@ -1,0 +1,127 @@
+#wrap{width: 960px;height:auto;margin:0 auto;
+  >#headBox{width: 100%;height:auto;position:relative;
+     &:after{content:" "; display: block; clear: both;}
+    >h1{width:150px;height:60px; background-color:#777; padding:10px; float:left;
+        -webkit-box-sizing:border-box; 
+        -moz-box-sizing:border-box; 
+        -ms-box-sizing:border-box; 
+        -o-box-sizing:border-box; 
+        box-sizing:border-box;
+        background-image:url(../main/all/header/logo.png);
+        background-repeat:no-repeat; background-position: center;}//h1
+    >#aside{width: 810px;height:60px;background-color: #f06; float:left;
+            padding:10px; -webkit-box-sizing:border-box; 
+                          -moz-box-sizing:border-box; 
+                          -ms-box-sizing:border-box; 
+                          -o-box-sizing:border-box; 
+                          box-sizing:border-box;
+      >#sign{width: 310px;height: 40px; 
+             background-image:url(../main/all/header/nar.png);
+             background-repeat:no-repeat; background-position:center; 
+             margin-right:300px; float:left;}//#sign
+      >#searchBox{width: 150px;height: 40px; float:left;
+        >ul{width:110px;height:15px; margin-left:40px; margin-bottom:5px;
+          >li{width:23px;height:15px;margin-right:15px; float:left;
+              color:#fff; font-weight:bold;}//li
+          >li:first-child{width:30px;}//li
+          >li:last-child{width:27px;margin-right:0;}//li
+        }//ul
+        >form{width: 150px;height:auto;
+          >fieldset{width: 150px;height:auto;
+            >input{width: 130px;height: 20px; float:left;}//input
+            >button{width: 20px;height: 20px; float:right;
+                    background-image:url(../main/all/header/search_btn.png);}//button
+            }//fieldset
+        }//form
+      }//#searchBox  
+    }//#aside
+    >#gnb{width:810px;height:30px; position:absolute;z-index:100; bottom: -60px;
+          background-color:rgba(255, 255, 255, 0.5);margin-left:150px; 
+          border-bottom:1px solid #333; float:left; display: none;
+      >ul{width: 100%;height: 30px; 
+        >li{width: 100px; height: 30px; margin-right:42px; float:left; 
+            text-align:center; line-height:30px; color:#f40; font-weight:bold;
+          >a{width: 100%; height: 100%;}// li>a
+          }//li
+        >li:last-child{margin-right:0;}//li:last-child
+      }//ul
+      }//#gnb
+  }// #headBox
+  section{width: 100%;height: 800px; background-color:#dfa;padding-top: 30px;
+          -webkit-box-sizing:border-box; 
+           -moz-box-sizing:border-box; 
+           -ms-box-sizing:border-box; 
+           -o-box-sizing:border-box; 
+           box-sizing:border-box;
+    >#arrangeBox{width: 810px;height: 40px; margin-left:150px; 
+                 background-color: #f40; margin-bottom: 60px;}//#arrangeBox
+    >#certificateBox{width: 450px;height: 365px; background-color: #fff;
+                     margin-left:255px;box-shadow:0.3em 0.3em 0.3em rgba(50,50,50,0.5);
+      >h2{width: 100%;height: 75px;
+          // background-image:url("../certificate/img/quotatioin/sample/bg.png");
+          background-image:linear-gradient(60deg, #faa 70%, #ff80b3 70%, #ffa);
+          text-align:center; line-height:75px; color:#fff; font-size:1.5em;
+          background-repeat:no-repeat;background-size:cover;}//#certificateBox>h2
+      >#certifi_box{padding: 20px 35px; -webkit-box-sizing:border-box; 
+           -moz-box-sizing:border-box; 
+           -ms-box-sizing:border-box; 
+           -o-box-sizing:border-box; 
+           box-sizing:border-box;
+        >h3{margin-bottom:10px;}//h3
+        >p{margin-bottom: 10px;}//p
+        >form{width: 100%; height: auto;background-color:#aff;
+          >fieldset{width: 100%;height:auto; background-color:#ffa;
+            &:first-child{width: 100%;height: auto;
+               padding:20px 9px;-webkit-box-sizing:border-box; 
+                -moz-box-sizing:border-box; -ms-box-sizing:border-box; 
+                -o-box-sizing:border-box; box-sizing:border-box;
+                background-color:#aff;}//fieldset:first-child
+            >dl{width: 100%; height: auto;
+              &:after{content:" "; display:block; clear:both;}//after\
+              &:first-of-type{margin-bottom: 1.25rem;}
+              >dt{width:4.375rem;height:25px; float:left; margin-right:10px;
+                  background-color:#ada; font-size:0.8em; letter-spacing:-0.025em;
+                  text-align:center;}//dt
+              >dd{width:4.75rem;height:25px; float:left; margin-right:10px;
+                  background-color:#fda;
+                &:before{content:"-"; position:relative; top:0; left:-0.5em;}//dd:before
+                &:last-of-type{margin-right:0;}
+                &:first-of-type:before{display:none;
+                  >dd:before{content:"-"; position:absolute;top:0; left:-0.25em;}
+                  }//first-of-type:before
+                >input[type="text"]{width:4.375rem; height:100%; border:1px solid #33c;
+                       -webkit-box-sizing:border-box; 
+                -moz-box-sizing:border-box; -ms-box-sizing:border-box; 
+                -o-box-sizing:border-box; box-sizing:border-box;
+                       text-indent:0.35rem; float:right;}//>input
+                }//dd
+        #fisrtNum{width: 100%;height: 100%;box-sizing:border-box;
+          border:1px solid #777; background-color: #fff;}
+          &:last-of-type{
+            label{cursor:pointer; trasition: all 500ms ease-in;}
+            input[type="radio"]{opacity:0; position: absolute;z-index: -100;}
+            input[type="radio"]:focus + label{border-bottom:3px solid #eee;}
+            input[type="radio"]:checked + label{color:#666; font-weight: bold; font-size: 1.4rem; background-color:#afa;}
+          }// dl>last-of-type  // radio체크 기능이 사라짐
+              }//dl
+
+
+            &:last-of-type{width: 100%;height: auto;}//fieldset:last-of-type
+            &:last-of-type>div{width: 100%;height:auto; 
+                                 border-bottom: 1px solid #333; padding:10px 5px; margin-bottom: 10px;
+                              -webkit-box-sizing:border-box; 
+                              -moz-box-sizing:border-box; 
+                              -ms-box-sizing:border-box; 
+                              -o-box-sizing:border-box; 
+                              box-sizing:border-box;}//fieldset:last-of-type>div
+          >input[type="submit"]{width:70px; height:40px; float:left; margin-left: 90px;
+                                background-color:#f06; font-size:1.5rem; color:#fff;}
+          >input[type="reset"]{width:70px; height:40px; float:right; margin-right: 90px;
+                                background-color:#dfd;}
+                                }//fieldset
+        }//form
+      }//#certificateBox>#certifi_box
+    }//#certificateBox
+  }//section
+  #footBox{width: 100%;height: 120px;background-color:#777;}
+  }//#wrap

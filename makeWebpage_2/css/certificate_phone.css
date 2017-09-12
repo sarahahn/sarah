@@ -1,0 +1,271 @@
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+  #wrap > #headBox {
+    width: 100%;
+    height: auto;
+    position: relative; }
+    #wrap > #headBox:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #wrap > #headBox > h1 {
+      width: 150px;
+      height: 60px;
+      background-color: #777;
+      padding: 10px;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      background-image: url(../main/all/header/logo.png);
+      background-repeat: no-repeat;
+      background-position: center; }
+    #wrap > #headBox > #aside {
+      width: 810px;
+      height: 60px;
+      background-color: #f06;
+      float: left;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      #wrap > #headBox > #aside > #sign {
+        width: 310px;
+        height: 40px;
+        background-image: url(../main/all/header/nar.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 300px;
+        float: left; }
+      #wrap > #headBox > #aside > #searchBox {
+        width: 150px;
+        height: 40px;
+        float: left; }
+        #wrap > #headBox > #aside > #searchBox > ul {
+          width: 110px;
+          height: 15px;
+          margin-left: 40px;
+          margin-bottom: 5px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li {
+            width: 23px;
+            height: 15px;
+            margin-right: 15px;
+            float: left;
+            color: #fff;
+            font-weight: bold; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:first-child {
+            width: 30px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:last-child {
+            width: 27px;
+            margin-right: 0; }
+        #wrap > #headBox > #aside > #searchBox > form {
+          width: 150px;
+          height: auto; }
+          #wrap > #headBox > #aside > #searchBox > form > fieldset {
+            width: 150px;
+            height: auto; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > input {
+              width: 130px;
+              height: 20px;
+              float: left; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > button {
+              width: 20px;
+              height: 20px;
+              float: right;
+              background-image: url(../main/all/header/search_btn.png); }
+    #wrap > #headBox > #gnb {
+      width: 810px;
+      height: 30px;
+      position: absolute;
+      z-index: 100;
+      bottom: -60px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin-left: 150px;
+      border-bottom: 1px solid #333;
+      float: left;
+      display: none; }
+      #wrap > #headBox > #gnb > ul {
+        width: 100%;
+        height: 30px; }
+        #wrap > #headBox > #gnb > ul > li {
+          width: 100px;
+          height: 30px;
+          margin-right: 42px;
+          float: left;
+          text-align: center;
+          line-height: 30px;
+          color: #f40;
+          font-weight: bold; }
+          #wrap > #headBox > #gnb > ul > li > a {
+            width: 100%;
+            height: 100%; }
+        #wrap > #headBox > #gnb > ul > li:last-child {
+          margin-right: 0; }
+  #wrap section {
+    width: 100%;
+    height: 800px;
+    background-color: #dfa;
+    padding-top: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+    #wrap section > #arrangeBox {
+      width: 810px;
+      height: 40px;
+      margin-left: 150px;
+      background-color: #f40;
+      margin-bottom: 60px; }
+    #wrap section > #certificateBox {
+      width: 450px;
+      height: 365px;
+      background-color: #fff;
+      margin-left: 255px;
+      box-shadow: 0.3em 0.3em 0.3em rgba(50, 50, 50, 0.5); }
+      #wrap section > #certificateBox > h2 {
+        width: 100%;
+        height: 75px;
+        background-image: linear-gradient(60deg, #faa 70%, #ff80b3 70%, #ffa);
+        text-align: center;
+        line-height: 75px;
+        color: #fff;
+        font-size: 1.5em;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      #wrap section > #certificateBox > #certifi_box {
+        padding: 20px 35px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+        #wrap section > #certificateBox > #certifi_box > h3 {
+          margin-bottom: 10px; }
+        #wrap section > #certificateBox > #certifi_box > p {
+          margin-bottom: 10px; }
+        #wrap section > #certificateBox > #certifi_box > form {
+          width: 100%;
+          height: auto;
+          background-color: #aff; }
+          #wrap section > #certificateBox > #certifi_box > form > fieldset {
+            width: 100%;
+            height: auto;
+            background-color: #ffa; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset:first-child {
+              width: 100%;
+              height: auto;
+              padding: 20px 9px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+              background-color: #aff; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset > dl {
+              width: 100%;
+              height: auto; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:after {
+                content: " ";
+                display: block;
+                clear: both; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:first-of-type {
+                margin-bottom: 1.25rem; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dt {
+                width: 4.375rem;
+                height: 25px;
+                float: left;
+                margin-right: 10px;
+                background-color: #ada;
+                font-size: 0.8em;
+                letter-spacing: -0.025em;
+                text-align: center; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd {
+                width: 4.75rem;
+                height: 25px;
+                float: left;
+                margin-right: 10px;
+                background-color: #fda; }
+                #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd:before {
+                  content: "-";
+                  position: relative;
+                  top: 0;
+                  left: -0.5em; }
+                #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd:last-of-type {
+                  margin-right: 0; }
+                #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd:first-of-type:before {
+                  display: none; }
+                  #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd:first-of-type:before > dd:before {
+                    content: "-";
+                    position: absolute;
+                    top: 0;
+                    left: -0.25em; }
+                #wrap section > #certificateBox > #certifi_box > form > fieldset > dl > dd > input[type="text"] {
+                  width: 4.375rem;
+                  height: 100%;
+                  border: 1px solid #33c;
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  -ms-box-sizing: border-box;
+                  -o-box-sizing: border-box;
+                  box-sizing: border-box;
+                  text-indent: 0.35rem;
+                  float: right; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl #fisrtNum {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border: 1px solid #777;
+                background-color: #fff; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:last-of-type label {
+                cursor: pointer;
+                trasition: all 500ms ease-in; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:last-of-type input[type="radio"] {
+                opacity: 0;
+                position: absolute;
+                z-index: -100; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:last-of-type input[type="radio"]:focus + label {
+                border-bottom: 3px solid #eee; }
+              #wrap section > #certificateBox > #certifi_box > form > fieldset > dl:last-of-type input[type="radio"]:checked + label {
+                color: #666;
+                font-weight: bold;
+                font-size: 1.4rem;
+                background-color: #afa; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset:last-of-type {
+              width: 100%;
+              height: auto; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset:last-of-type > div {
+              width: 100%;
+              height: auto;
+              border-bottom: 1px solid #333;
+              padding: 10px 5px;
+              margin-bottom: 10px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset > input[type="submit"] {
+              width: 70px;
+              height: 40px;
+              float: left;
+              margin-left: 90px;
+              background-color: #f06;
+              font-size: 1.5rem;
+              color: #fff; }
+            #wrap section > #certificateBox > #certifi_box > form > fieldset > input[type="reset"] {
+              width: 70px;
+              height: 40px;
+              float: right;
+              margin-right: 90px;
+              background-color: #dfd; }
+  #wrap #footBox {
+    width: 100%;
+    height: 120px;
+    background-color: #777; }

@@ -1,0 +1,239 @@
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+  #wrap > #headBox {
+    width: 100%;
+    height: auto;
+    position: relative; }
+    #wrap > #headBox:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #wrap > #headBox > h1 {
+      width: 150px;
+      height: 60px;
+      background-color: #777;
+      padding: 10px;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      background-image: url(../main/all/header/logo.png);
+      background-repeat: no-repeat;
+      background-position: center; }
+    #wrap > #headBox > #aside {
+      width: 810px;
+      height: 60px;
+      background-color: #f06;
+      float: left;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      #wrap > #headBox > #aside > #sign {
+        width: 310px;
+        height: 40px;
+        background-image: url(../main/all/header/nar.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 300px;
+        float: left; }
+      #wrap > #headBox > #aside > #searchBox {
+        width: 150px;
+        height: 40px;
+        float: left; }
+        #wrap > #headBox > #aside > #searchBox > ul {
+          width: 110px;
+          height: 15px;
+          margin-left: 40px;
+          margin-bottom: 5px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li {
+            width: 23px;
+            height: 15px;
+            margin-right: 15px;
+            float: left;
+            color: #fff;
+            font-weight: bold; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:first-child {
+            width: 30px; }
+          #wrap > #headBox > #aside > #searchBox > ul > li:last-child {
+            width: 27px;
+            margin-right: 0; }
+        #wrap > #headBox > #aside > #searchBox > form {
+          width: 150px;
+          height: auto; }
+          #wrap > #headBox > #aside > #searchBox > form > fieldset {
+            width: 150px;
+            height: auto; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > input {
+              width: 130px;
+              height: 20px;
+              float: left; }
+            #wrap > #headBox > #aside > #searchBox > form > fieldset > button {
+              width: 20px;
+              height: 20px;
+              float: right;
+              background-image: url(../main/all/header/search_btn.png); }
+    #wrap > #headBox > #gnb {
+      width: 810px;
+      height: 30px;
+      position: absolute;
+      z-index: 100;
+      bottom: -60px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin-left: 150px;
+      border-bottom: 1px solid #333;
+      float: left;
+      display: none; }
+      #wrap > #headBox > #gnb > ul {
+        width: 100%;
+        height: 30px; }
+        #wrap > #headBox > #gnb > ul > li {
+          width: 100px;
+          height: 30px;
+          margin-right: 42px;
+          float: left;
+          text-align: center;
+          line-height: 30px;
+          color: #f40;
+          font-weight: bold; }
+          #wrap > #headBox > #gnb > ul > li > a {
+            width: 100%;
+            height: 100%; }
+        #wrap > #headBox > #gnb > ul > li:last-child {
+          margin-right: 0; }
+  #wrap section {
+    width: 100%;
+    height: 900px;
+    background-color: #fefefe;
+    padding: 70px 60px 40px 149px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+    #wrap section > #sumaryBox {
+      width: 750px;
+      height: 40px;
+      margin-bottom: 40px;
+      background-image: url(../join/join/article_link_02.png);
+      background-repeat: no-repeat; }
+    #wrap section > #agreecheck {
+      width: 710px;
+      height: 40px;
+      margin-left: 20px;
+      margin-bottom: 50px; }
+      #wrap section > #agreecheck > .check_img {
+        width: 32px;
+        height: 32px;
+        margin-left: 20px;
+        float: left;
+        background-image: url(../join/join/join_icon.png);
+        background-repeat: no-repeat;
+        background-position: 0 -40px; }
+      #wrap section > #agreecheck > p {
+        margin-left: 10px;
+        float: left; }
+    #wrap section > #termBox {
+      width: 720px;
+      height: 190px;
+      margin-left: 20px;
+      margin-bottom: 50px; }
+      #wrap section > #termBox > .title {
+        width: 720px;
+        height: auto;
+        margin-bottom: 10px;
+        float: left; }
+        #wrap section > #termBox > .title > .checimg {
+          width: 20px;
+          height: 20px;
+          margin-left: 30px;
+          float: left;
+          background-image: url(../join/join/join_icon.png);
+          margin-bottom: 10px;
+          background-repeat: no-repeat;
+          float: left;
+          background-position: 0 -80px; }
+        #wrap section > #termBox > .title > h3 {
+          width: 650px;
+          height: 20px;
+          margin-left: 20px;
+          float: left;
+          margin-bottom: 10px; }
+      #wrap section > #termBox > p {
+        width: 720px;
+        height: 160px;
+        background-color: #ccc;
+        float: left;
+        overflow-y: scroll;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+      #wrap section > #termBox > #personal {
+        width: 720px;
+        height: 190px;
+        margin-left: 20px; }
+        #wrap section > #termBox > #personal > .title {
+          width: 720px;
+          height: auto;
+          margin-bottom: 10px;
+          float: left; }
+          #wrap section > #termBox > #personal > .title > .checimg {
+            width: 20px;
+            height: 20px;
+            margin-left: 30px;
+            float: left;
+            background-image: url(../join/join/join_icon.png);
+            margin-bottom: 10px;
+            background-repeat: no-repeat;
+            float: left;
+            background-position: 0 -80px; }
+          #wrap section > #termBox > #personal > .title > h3 {
+            width: 650px;
+            height: 20px;
+            margin-left: 20px;
+            float: left;
+            margin-bottom: 10px; }
+        #wrap section > #termBox > #personal > p {
+          width: 720px;
+          height: 160px;
+          background-color: #ccc;
+          float: left;
+          overflow-y: scroll;
+          padding: 10px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom: 40px; }
+    #wrap section > #agreebtn > .agree {
+      width: 140px;
+      height: 40px;
+      margin-left: 180px;
+      background-color: #f66;
+      line-height: 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #eee; }
+    #wrap section > #agreebtn > .notagree {
+      width: 140px;
+      height: 40px;
+      margin-left: 100px;
+      background-color: #f66;
+      line-height: 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #eee; }
+  #wrap #footBox {
+    width: 100%;
+    height: 120px;
+    background-color: #777; }
