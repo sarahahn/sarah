@@ -6,7 +6,7 @@ html, body, h1, h2, h3, h4, h5, h6,
 p, div, img, table, figure, 
 header, article, section, footer, nav,aside,main, 
 ul,ol,dl,li,dt,dd,fieldset, form, button{
-	margin:0; padding:0; border:0; outline:0;
+	margin:0 auto; padding:0; border:0; outline:0;
 	font: 100%/1.2 "myriad pro", arial, nanumGothic, dotum, sans-serif; }
 
 h1,h2,h3,h4,h5,h6{font-weight:bold;}

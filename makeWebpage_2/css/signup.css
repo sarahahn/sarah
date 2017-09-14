@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* signup.scss */
+#wrap {
+  width: 960px;
+  height: auto; }
+  #wrap #headBox {
+    width: 100%;
+    height: 60px;
+    background-color: #ffa; }
+  #wrap section {
+    width: 100%;
+    height: 790px;
+    padding: 70px 60px 80px 150px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #eee; }
+    #wrap section > #summaryBox {
+      width: 750px;
+      height: 40px;
+      background-image: url("../join/join/article_link_03.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin-bottom: 40px; }
+    #wrap section > form {
+      width: 100%;
+      height: 520px;
+      background-color: #ffa;
+      padding: 0 90px 80px 44px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      #wrap section > form > #idPw {
+        width: 100%;
+        height: 135px;
+        border-bottom: 1px solid #999;
+        /* fieldset_1, 아이디 시작 */
+        /* fieldset_1, 아이디 끝 */
+        /* fieldset_1, 패스워드 시작 */
+        /* fieldset_1, 패스워드 끝 */ }
+        #wrap section > form > #idPw > .idBox {
+          width: 100%;
+          height: 30px;
+          margin-bottom: 10px; }
+          #wrap section > form > #idPw > .idBox > .icon {
+            width: 17px;
+            height: 20px;
+            margin-left: 10px;
+            margin-top: 5px;
+            float: left;
+            background-image: url("../join/join/join_icon.png");
+            background-repeat: no-repeat;
+            background-size: none;
+            background-position: -50px 0;
+            margin-right: 10px; }
+          #wrap section > form > #idPw > .idBox > label {
+            width: 70px;
+            height: 20px;
+            line-height: 30px;
+            float: left;
+            margin-right: 30px; }
+          #wrap section > form > #idPw > .idBox > #idText {
+            width: 240px;
+            height: 30px;
+            float: left;
+            margin-right: 20px; }
+          #wrap section > form > #idPw > .idBox > button {
+            width: 100px;
+            height: 30px;
+            float: left;
+            background-color: #f00b83;
+            box-shadow: 3px 3px 3px #aaa;
+            border-radius: 5px; }
+        #wrap section > form > #idPw > .pwBox {
+          width: 100%;
+          height: 30px;
+          margin-bottom: 10px; }
+          #wrap section > form > #idPw > .pwBox > .icon {
+            width: 17px;
+            height: 20px;
+            margin-left: 10px;
+            margin-top: 5px;
+            float: left;
+            background-image: url("../join/join/join_icon.png");
+            background-repeat: no-repeat;
+            background-size: none;
+            background-position: -50px -20px;
+            margin-right: 10px; }
+          #wrap section > form > #idPw > .pwBox > label {
+            width: 70px;
+            height: 20px;
+            line-height: 30px;
+            float: left;
+            margin-right: 30px; }
+          #wrap section > form > #idPw > .pwBox > #pwText {
+            width: 240px;
+            height: 30px;
+            float: left;
+            margin-right: 20px; }
+    #wrap section > #btn {
+      width: 500px;
+      height: 40px;
+      margin-left: 117px; }
+      #wrap section > #btn > .agre {
+        width: 140px;
+        height: 40px;
+        margin-left: 20px;
+        background-color: #f00b83;
+        float: left; }
+      #wrap section > #btn > .cancl {
+        width: 140px;
+        height: 40px;
+        margin-left: 80px;
+        background-color: #afa;
+        float: left; }
+  #wrap #footBox {
+    width: 100%;
+    height: 120px;
+    background-color: #333; }

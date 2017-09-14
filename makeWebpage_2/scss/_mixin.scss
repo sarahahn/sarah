@@ -1,0 +1,30 @@
+// mixin.scss
+
+@mixin border-box(){
+  -webkit-box-sizing:border-box; 
+  -moz-box-sizing:border-box; 
+  -ms-box-sizing:border-box; 
+  -o-box-sizing:border-box; 
+  box-sizing:border-box;
+}
+
+$url:"../join/join/";
+@mixin link($u:$url, $f:none, $s:100%){
+  background-image: url($u+$f);
+  background-repeat:no-repeat;
+  background-size:$s;
+}
+
+@mixin icon($x:none, $y:none){
+  width: 17px;height: 20px; margin-left:10px; margin-top:5px;float:left;
+  @include link($f:"join_icon.png",$s:none);
+  background-position: $x $y; margin-right:10px;
+}
+
+@mixin field_1_label(){
+  width: 70px;height: 20px; line-height:30px; float:left; margin-right: 30px;
+}
+
+@mixin field_1_input(){
+  width: 240px;height: 30px;float:left;margin-right:20px;
+}

@@ -1,0 +1,39 @@
+/* signup.scss */
+@import "mixin";
+
+
+#wrap{width: 960px;height:auto;
+  #headBox{width: 100%;height: 60px;background-color:#ffa;}//#headBox
+  section{width: 100%;height: 790px;padding:70px 60px 80px 150px;
+           @include border-box; background-color:#eee;
+    >#summaryBox{width: 750px;height: 40px; @include link($f:"article_link_03.png");
+                 margin-bottom: 40px;}
+    >form{width: 100%;height: 520px; background-color:#ffa; padding:0 90px 80px 44px;
+          @include border-box;
+      >#idPw{width: 100%;height: 135px; border-bottom: 1px solid #999;
+/* fieldset_1, 아이디 시작 */
+        >.idBox{width: 100%;height: 30px; margin-bottom:10px;
+          >.icon{@include icon($x:-50px, $y:0);}//.icon
+          >label{@include field_1_label;}//(label)
+          >#idText{@include field_1_input;}//(input영역)
+          >button{width: 100px; height: 30px;float:left;background-color:#f00b83; box-shadow:3px 3px 3px #aaa;
+                  border-radius:5px;}//(중복확인btn영역)
+        }//.idBox(id입력란 전체)
+/* fieldset_1, 아이디 끝 */
+
+/* fieldset_1, 패스워드 시작 */
+      >.pwBox{width: 100%;height: 30px; margin-bottom: 10px;
+        >.icon{@include icon($x:-50px, $y:-20px);}
+        >label{@include field_1_label;}
+        >#pwText{@include field_1_input;}
+        }//.pwBox
+/* fieldset_1, 패스워드 끝 */
+      }//#idPw(fieldset_1)
+    }//form
+    >#btn{width: 500px;height: 40px; margin-left:117px;
+      >.agre{width: 140px;height: 40px;margin-left:20px; background-color:#f00b83; float:left;}
+      >.cancl{width: 140px;height: 40px; margin-left:80px; background-color:#afa; float:left;}
+    }//btn
+  }//section
+  #footBox{width:100%;height:120px; background-color:#333;}//#footBox
+}//#wrap
